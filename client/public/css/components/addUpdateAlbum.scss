@@ -1,0 +1,466 @@
+@import '../variables.scss';
+@import '../mixins/headerMixin.scss';
+@import '../mixins/inputMixin.scss';
+@import '../mixins/buttonMixin.scss';
+
+.newAlbumBlock {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  .header {
+    @include headerStyle;
+  }
+  @mixin blockStyle($width: 20vw, $height: 14vh) {
+    background-color: $lightestColor;
+    box-shadow: $boxShadow;
+    width: $width;
+    height: $height;
+    border-radius: $borderRadius;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1vh 1vw;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    @include inputStyle;
+  }
+  .albumDetailsBlock {
+    @include blockStyle($height: fit-content);
+    margin-top: 1vw;
+    padding-top: 3vh;
+  }
+  .albumGenresBlock {
+    @include blockStyle;
+  }
+  .albumLanguagesBlock {
+    @include blockStyle;
+  }
+  .albumTracksAndCreditsBlock {
+    display: flex;
+    height: 65vh;
+    .deleteTag {
+      button {
+        color: $boldColor;
+        font-weight: 800;
+        transition: color 0.2s ease-out;
+        background-color: transparent;
+        border: none;
+        &:hover {
+          color: $badMarkColor;
+          cursor: pointer;
+        }
+      }
+    }
+    .inputErrorField {
+      width: 17vw;
+      color: $errorColor;
+      transform: translateY(-0.8em);
+    }
+    .albumCreditsBlock {
+      display: flex;
+      flex-direction: column;
+      .albumCredits {
+        width: 20vw;
+        background-color: $lightestColor;
+        box-shadow: $boxShadow;
+        border-radius: $borderRadius;
+        overflow-y: auto;
+        max-height: 30vh;
+        margin: 1vh 1vw;
+        div {
+          display: flex;
+          justify-content: center;
+          #credits {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            tr {
+              display: flex;
+              // flex-wrap: wrap;
+              justify-content: center;
+              align-items: center;
+              td {
+                padding: 0.5rem;
+                &.creditPersonName {
+                  display: block;
+                  color: $boldColor;
+                  font-weight: 800;
+                  word-wrap: break-word;
+                  font-size: 1rem;
+                }
+                .creditPersonRole {
+                  background-color: $normalColor;
+                  font-weight: bold;
+                  color: $lightestColor;
+                  border-radius: $borderRadius;
+                  padding: 0.5rem;
+                  text-align: center;
+                  font-size: 0.9rem;
+                }
+              }
+              td:first-child {
+                width: 60%;
+                display: flex;
+                justify-content: left;
+              }
+              td:nth-child(2) {
+                width: 40%;
+                display: flex;
+                justify-content: center;
+              }
+            }
+          }
+        }
+      }
+    }
+    .albumTracksBlock {
+      display: flex;
+      flex-direction: column;
+      .albumTracks {
+        width: 20vw;
+        background-color: $lightestColor;
+        box-shadow: $boxShadow;
+        border-radius: $borderRadius;
+        max-height: 100%;
+        overflow-y: auto;
+        margin: 1vh 1vw;
+        table {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          flex-direction: column;
+          tr {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 85%;
+            padding: 0.5rem;
+            td {
+              font-size: 1rem;
+              color: $boldColor;
+              display: flex;
+              justify-content: center;
+              &.trackOrder {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 2vw;
+                height: 2vw;
+                font-size: 0.9rem;
+                background-color: $boldColor;
+                font-weight: bold;
+                color: $lightestColor;
+                border-radius: $borderRadius;
+                padding: 0.3rem;
+              }
+              &.trackName {
+                width: 90%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 800;
+              }
+              &.trackLength {
+                width: 10%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+              &.deleteTag {
+                width: 3vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+            }
+          }
+        }
+      }
+    }
+    .addTagButton {
+      height: fit-content;
+      @include buttonStyle(
+        $normalColor,
+        $boldColor,
+        $lightestColor,
+        $lightestColor,
+        $fontSize: 1.5rem
+      );
+    }
+  }
+  .addAlbumButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    button {
+      height: fit-content;
+      @include buttonStyle(
+        $normalColor,
+        $boldColor,
+        $lightestColor,
+        $lightestColor
+      );
+      font-size: 2rem;
+    }
+  }
+  .albumTagsBlock {
+    display: flex;
+    .albumTagElement {
+      @include blockStyle(20vw, fit-content);
+      margin-top: 1vw;
+      textarea {
+        width: 20vw;
+        height: 40vh;
+        font-size: 1.1rem;
+        text-align: justify;
+        word-wrap: break-word;
+        line-height: 1.4rem;
+        overflow-y: auto;
+        padding: 1vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .newAlbumBlock {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .header {
+      @include headerStyle;
+      font-size: 1.5rem;
+    }
+    @mixin blockStyle($width: 20vw, $height: 14vh) {
+      background-color: $lightestColor;
+      box-shadow: $boxShadow;
+      width: $width;
+      height: $height;
+      border-radius: $borderRadius;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 1vh 1vw;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      @include inputStyle(
+        $fontSizeText: 1rem,
+        $fontSizeLabel: 1.2rem,
+        $padding: 0rem,
+        $strokeHeight: 0.35vh
+      );
+    }
+    .albumDetailsBlock {
+      @include blockStyle($height: fit-content);
+      margin-top: 2vh;
+      padding-top: 5vh;
+    }
+    .albumGenresBlock {
+      padding-top: 5vh;
+      @include blockStyle;
+    }
+    .albumLanguagesBlock {
+      padding-top: 5vh;
+      @include blockStyle;
+    }
+    .albumTracksAndCreditsBlock {
+      display: flex;
+      height: 65vh;
+      .deleteTag {
+        button {
+          color: $boldColor;
+          font-weight: 800;
+          transition: color 0.2s ease-out;
+          background-color: transparent;
+          border: none;
+          &:hover {
+            color: $badMarkColor;
+            cursor: pointer;
+          }
+        }
+      }
+      .inputErrorField {
+        width: 17vw;
+        color: $errorColor;
+        transform: translateY(-0.8em);
+      }
+      .albumCreditsBlock {
+        display: flex;
+        flex-direction: column;
+        .albumCredits {
+          width: 20vw;
+          background-color: $lightestColor;
+          box-shadow: $boxShadow;
+          border-radius: $borderRadius;
+          overflow-y: auto;
+          max-height: 30vh;
+          margin: 1vh 1vw;
+          div {
+            display: flex;
+            justify-content: center;
+            #credits {
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              tr {
+                display: flex;
+                // flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                td {
+                  padding: 0.5rem;
+                  &.creditPersonName {
+                    display: block;
+                    color: $boldColor;
+                    font-weight: 800;
+                    word-wrap: break-word;
+                    font-size: 0.9rem;
+                  }
+                  .creditPersonRole {
+                    background-color: $normalColor;
+                    font-weight: bold;
+                    color: $lightestColor;
+                    border-radius: $borderRadius;
+                    padding: 0.5rem;
+                    text-align: center;
+                    font-size: 0.8rem;
+                  }
+                }
+                td:first-child {
+                  width: 60%;
+                  display: flex;
+                  justify-content: left;
+                }
+                td:nth-child(2) {
+                  width: 40%;
+                  display: flex;
+                  justify-content: center;
+                }
+              }
+            }
+          }
+        }
+      }
+      .albumTracksBlock {
+        display: flex;
+        flex-direction: column;
+        .albumTracks {
+          width: 20vw;
+          background-color: $lightestColor;
+          box-shadow: $boxShadow;
+          border-radius: $borderRadius;
+          max-height: 100%;
+          overflow-y: auto;
+          margin: 1vh 1vw;
+          table {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            flex-direction: column;
+            tr {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 85%;
+              padding: 0.5rem;
+              td {
+                font-size: 0.9rem;
+                color: $boldColor;
+                display: flex;
+                justify-content: center;
+                &.trackOrder {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 2vw;
+                  height: 2vw;
+                  font-size: 0.8rem;
+                  background-color: $boldColor;
+                  font-weight: bold;
+                  color: $lightestColor;
+                  border-radius: $borderRadius;
+                  padding: 0.3rem;
+                }
+                &.trackName {
+                  width: 90%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  font-weight: 800;
+                }
+                &.trackLength {
+                  width: 10%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+                &.deleteTag {
+                  width: 3vw;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+              }
+            }
+          }
+        }
+      }
+      .addTagButton {
+        height: fit-content;
+        @include buttonStyle(
+          $normalColor,
+          $boldColor,
+          $lightestColor,
+          $lightestColor,
+          $fontSize: 1.1rem
+        );
+      }
+    }
+    .addAlbumButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 15vh;
+      button {
+        height: fit-content;
+        @include buttonStyle(
+          $normalColor,
+          $boldColor,
+          $lightestColor,
+          $lightestColor
+        );
+        font-size: 1.4rem;
+      }
+    }
+    .albumTagsBlock {
+      display: flex;
+      .albumTagElement {
+        @include blockStyle(20vw, fit-content);
+        margin-top: 1vw;
+        textarea {
+          width: 20vw;
+          height: 40vh;
+          font-size: 1rem;
+          text-align: justify;
+          word-wrap: break-word;
+          line-height: 1.4rem;
+          overflow-y: auto;
+          padding: 1vw;
+        }
+      }
+    }
+  }
+}

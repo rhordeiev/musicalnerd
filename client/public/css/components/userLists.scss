@@ -1,0 +1,51 @@
+@import '../variables.scss';
+
+.userListsBlock {
+  height: inherit;
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  .userLists {
+    height: 57vh;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    background-color: $lightestColor;
+    border-radius: $borderRadius;
+    box-shadow: $boxShadow;
+  }
+  .userListsHeader {
+    width: inherit;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 800;
+    color: $normalColor;
+  }
+  .userListsElements {
+    width: inherit;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .moreLists {
+    height: 10%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 0.5vw;
+    a {
+      color: $normalColor;
+      text-decoration: none;
+      transition: color 0.2s ease-out;
+      &:hover {
+        color: $boldColor;
+      }
+    }
+  }
+}

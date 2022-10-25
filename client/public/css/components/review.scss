@@ -1,0 +1,494 @@
+@import '../variables.scss';
+
+@mixin linkStyle {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.1s ease-out;
+  &:hover {
+    color: $boldColor;
+  }
+}
+
+:root {
+  --review-bg-color-good: #{$goodMarkColor};
+  --review-bg-color-meh: #{$mehMarkColor};
+  --review-bg-color-bad: #{$badMarkColor};
+  --review-bg-color-default: #{$normalColor};
+  --review-bg-color: var(--review-bg-color-default);
+}
+
+.userReview {
+  // background: url('../../images/background.svg'), $normalColor;
+  // background-size: 100% 550%;
+  // background-repeat: no-repeat;
+  // background-position: center center;
+  background-color: var(--review-bg-color);
+  border-radius: $borderRadius;
+  width: 40vw;
+  height: 23vh;
+  box-shadow: $boxShadow;
+  display: flex;
+  margin: 1vw;
+  .userReviewInfo {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .albumCredentials {
+      background-color: $lightestColor;
+      width: fit-content;
+      border-top-left-radius: $borderRadius;
+      border-bottom-right-radius: $borderRadius;
+      padding: 0.3rem;
+      font-weight: 800;
+      color: var(--review-bg-color);
+      a {
+        @include linkStyle;
+      }
+    }
+    .bottomCredentials {
+      background-color: $lightestColor;
+      width: fit-content;
+      border-bottom-left-radius: $borderRadius;
+      border-top-right-radius: $borderRadius;
+      font-weight: 800;
+      color: var(--review-bg-color);
+      padding: 0.3rem;
+      .userCredentials {
+        padding: 0.3rem;
+        a {
+          @include linkStyle;
+        }
+      }
+      .dateInfo {
+        padding: 0.3rem;
+        border-left: 0.2rem solid var(--review-bg-color);
+      }
+    }
+    .reviewMainInfo {
+      display: flex;
+      $reviewMainInfoBorder: 0.35rem solid $lightestColor;
+      height: 10vh;
+      .reviewHeader {
+        width: 80%;
+        height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: $reviewMainInfoBorder;
+        border-bottom: $reviewMainInfoBorder;
+        padding: 1vw;
+        font-size: 2rem;
+        font-weight: 800;
+        color: $lightestColor;
+        word-break: break-all;
+      }
+      .userMark {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: $borderRadius;
+        height: inherit;
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: inherit;
+          width: 5vw;
+          background-color: $lightestColor;
+          font-size: 2rem;
+          font-weight: 800;
+          color: var(--review-bg-color);
+          border-bottom-right-radius: $borderRadius;
+          border-top-right-radius: $borderRadius;
+          border: $reviewMainInfoBorder;
+          // box-shadow: $boxShadow;
+        }
+      }
+    }
+  }
+  .userReviewActions {
+    width: 16%;
+    height: inherit;
+    background-color: white;
+    border-top-right-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    // border-left: 0.5rem solid $lightestColor;
+    a {
+      .showReviewIcon {
+        color: var(--review-bg-color);
+        font-size: 2rem;
+        transition: 0.1s ease-out;
+        &:hover {
+          color: $boldColor;
+        }
+      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 30%;
+      border-bottom: 0.35rem solid var(--review-bg-color);
+      text-decoration: none;
+    }
+    .reccomendBlock {
+      height: 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .reviewUpvotesCount {
+        color: $lightestColor;
+        background-color: var(--review-bg-color);
+        font-size: 2rem;
+        font-weight: 800;
+        border: 0.25rem solid var(--review-bg-color);
+        border-radius: $borderRadius;
+        margin: 0.3rem;
+        padding: 0.3rem;
+        min-width: 4vw;
+        text-align: center;
+      }
+      button {
+        .recommendIcon {
+          display: flex;
+          justify-content: center;
+          color: var(--review-bg-color);
+          font-size: 2.5rem;
+          transition: transform 0.1s ease-out, color 0.1s ease-out;
+        }
+        background-color: transparent;
+        border: none;
+        &:hover .recommendIcon {
+          color: $boldColor;
+          cursor: pointer;
+        }
+      }
+      .recommendClickedStyle {
+        transform: rotateZ(15deg) scale(1.2);
+        color: $boldColor !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .userReview {
+    background-color: var(--review-bg-color);
+    border-radius: $borderRadius;
+    width: 40vw;
+    height: 24vh;
+    box-shadow: $boxShadow;
+    display: flex;
+    margin: 0.5vw;
+    .userReviewInfo {
+      width: 85%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .albumCredentials {
+        background-color: $lightestColor;
+        width: fit-content;
+        border-top-left-radius: $borderRadius;
+        border-bottom-right-radius: $borderRadius;
+        padding: 0.2rem;
+        font-weight: 800;
+        color: var(--review-bg-color);
+        a {
+          @include linkStyle;
+          font-size: 0.85rem;
+        }
+      }
+      .bottomCredentials {
+        background-color: $lightestColor;
+        width: fit-content;
+        border-bottom-left-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
+        font-weight: 800;
+        color: var(--review-bg-color);
+        padding: 0.07rem;
+        .userCredentials {
+          padding: 0.2rem;
+          a {
+            @include linkStyle;
+            font-size: 0.85rem;
+          }
+        }
+        .dateInfo {
+          padding: 0.2rem;
+          font-size: 0.85rem;
+          border-left: 0.15rem solid var(--review-bg-color);
+        }
+      }
+      .reviewMainInfo {
+        display: flex;
+        $reviewMainInfoBorder: 0.25rem solid $lightestColor;
+        height: 10vh;
+        .reviewHeader {
+          width: 80%;
+          height: inherit;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-top: $reviewMainInfoBorder;
+          border-bottom: $reviewMainInfoBorder;
+          padding: 1vw;
+          font-size: 1.5rem;
+          font-weight: 800;
+          color: $lightestColor;
+          word-break: break-all;
+        }
+        .userMark {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: $borderRadius;
+          height: inherit;
+          span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: inherit;
+            width: 5vw;
+            background-color: $lightestColor;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--review-bg-color);
+            border-bottom-right-radius: $borderRadius;
+            border-top-right-radius: $borderRadius;
+            border: $reviewMainInfoBorder;
+            // box-shadow: $boxShadow;
+          }
+        }
+      }
+    }
+    .userReviewActions {
+      width: 16%;
+      height: inherit;
+      background-color: white;
+      border-top-right-radius: $borderRadius;
+      border-bottom-right-radius: $borderRadius;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      // border-left: 0.5rem solid $lightestColor;
+      a {
+        .showReviewIcon {
+          color: var(--review-bg-color);
+          font-size: 1.5rem;
+          transition: 0.1s ease-out;
+          &:hover {
+            color: $boldColor;
+          }
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 30%;
+        border-bottom: 0.25rem solid var(--review-bg-color);
+        text-decoration: none;
+      }
+      .reccomendBlock {
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .reviewUpvotesCount {
+          color: $lightestColor;
+          background-color: var(--review-bg-color);
+          font-size: 1.5rem;
+          font-weight: 800;
+          border: 0.25rem solid var(--review-bg-color);
+          border-radius: $borderRadius;
+          margin: 0.3rem;
+          padding: 0.3rem;
+          min-width: 4vw;
+          text-align: center;
+        }
+        button {
+          .recommendIcon {
+            display: flex;
+            justify-content: center;
+            color: var(--review-bg-color);
+            font-size: 2rem;
+            transition: transform 0.1s ease-out, color 0.1s ease-out;
+          }
+          background-color: transparent;
+          border: none;
+          &:hover .recommendIcon {
+            color: $boldColor;
+            cursor: pointer;
+          }
+        }
+        .recommendClickedStyle {
+          transform: rotateZ(15deg) scale(1.2);
+          color: $boldColor !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .userReview {
+    background-color: var(--review-bg-color);
+    border-radius: $borderRadius;
+    width: 90vw;
+    height: 20vh;
+    box-shadow: $boxShadow;
+    display: flex;
+    margin: 1vw;
+    .userReviewInfo {
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .albumCredentials {
+        background-color: $lightestColor;
+        width: fit-content;
+        border-top-left-radius: $borderRadius;
+        border-bottom-right-radius: $borderRadius;
+        padding: 0.1rem;
+        font-weight: 800;
+        color: var(--review-bg-color);
+        a {
+          @include linkStyle;
+          font-size: 0.75rem;
+        }
+      }
+      .bottomCredentials {
+        background-color: $lightestColor;
+        width: fit-content;
+        border-bottom-left-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
+        font-weight: 800;
+        color: var(--review-bg-color);
+        padding: 0;
+        .userCredentials {
+          padding: 0.2rem;
+          a {
+            @include linkStyle;
+            font-size: 0.75rem;
+          }
+        }
+        .dateInfo {
+          padding: 0.2rem;
+          font-size: 0.75rem;
+          border-left: 0.15rem solid var(--review-bg-color);
+        }
+      }
+      .reviewMainInfo {
+        display: flex;
+        $reviewMainInfoBorder: 0.25rem solid $lightestColor;
+        height: 7vh;
+        .reviewHeader {
+          width: 80%;
+          height: inherit;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-top: $reviewMainInfoBorder;
+          border-bottom: $reviewMainInfoBorder;
+          padding: 0vw;
+          font-size: 1.2rem;
+          font-weight: 800;
+          color: $lightestColor;
+          word-break: break-all;
+        }
+        .userMark {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: $borderRadius;
+          height: inherit;
+          span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: inherit;
+            width: 12vw;
+            background-color: $lightestColor;
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--review-bg-color);
+            border-bottom-right-radius: $borderRadius;
+            border-top-right-radius: $borderRadius;
+            border: $reviewMainInfoBorder;
+            // box-shadow: $boxShadow;
+          }
+        }
+      }
+    }
+    .userReviewActions {
+      width: 25%;
+      height: inherit;
+      background-color: white;
+      border-top-right-radius: $borderRadius;
+      border-bottom-right-radius: $borderRadius;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      // border-left: 0.5rem solid $lightestColor;
+      a {
+        .showReviewIcon {
+          color: var(--review-bg-color);
+          font-size: 1.5rem;
+          transition: 0.1s ease-out;
+          &:hover {
+            color: $boldColor;
+          }
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 30%;
+        border-bottom: 0.25rem solid var(--review-bg-color);
+        text-decoration: none;
+      }
+      .reccomendBlock {
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .reviewUpvotesCount {
+          color: $lightestColor;
+          background-color: var(--review-bg-color);
+          font-size: 1.3rem;
+          font-weight: 800;
+          border: 0.25rem solid var(--review-bg-color);
+          border-radius: $borderRadius;
+          margin: 0.3rem;
+          padding: 0.3rem;
+          min-width: 14vw;
+          text-align: center;
+        }
+        button {
+          .recommendIcon {
+            display: flex;
+            justify-content: center;
+            color: var(--review-bg-color);
+            font-size: 2rem;
+            transition: transform 0.1s ease-out, color 0.1s ease-out;
+          }
+          background-color: transparent;
+          border: none;
+          &:hover .recommendIcon {
+            color: $boldColor;
+            cursor: pointer;
+          }
+        }
+        .recommendClickedStyle {
+          transform: rotateZ(15deg) scale(1.2);
+          color: $boldColor !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,539 @@
+@import '../variables.scss';
+@import '../mixins/inputMixin.scss';
+@import '../mixins/buttonMixin.scss';
+@import '../mixins/headerMixin.scss';
+
+.chatBlock {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  .block {
+    margin: 1vw;
+  }
+  .header {
+    @include headerStyle;
+  }
+  .mainBlock {
+    display: flex;
+    width: 40vw;
+    height: 80vh;
+    flex-direction: column;
+    box-shadow: none;
+    .chat {
+      width: 40vw;
+      height: 63vh;
+      display: flex;
+      flex-direction: column;
+      background-color: $lightestColor;
+      border-radius: $borderRadius;
+      box-shadow: $boxShadow;
+      padding: 1vw;
+      .chatMessages {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 38vw;
+        height: 55vh;
+        overflow-y: auto;
+        .avatar {
+          display: flex;
+          width: fit-content;
+          height: fit-content;
+          img {
+            width: 2.5vw;
+            height: 2.5vw;
+            margin: 0.5vw 0;
+            object-fit: cover;
+            border-radius: $borderRadius;
+          }
+        }
+        .message {
+          display: flex;
+          flex-direction: column;
+          padding: 0.5vw;
+          margin: 0.5vw;
+          max-height: 35vh;
+          max-width: 20vw;
+          width: fit-content;
+          min-width: 10vw;
+          height: fit-content;
+          border-radius: $borderRadius;
+          .name {
+            display: flex;
+            justify-content: left;
+            font-size: 0.8rem;
+            font-weight: bold;
+            width: 100%;
+            text-decoration: none;
+            transition: color 0.2s ease-out;
+          }
+          .text {
+            display: flex;
+            justify-content: left;
+            width: 100%;
+            word-break: break-all;
+            color: $lightestColor;
+          }
+          .date {
+            display: flex;
+            justify-content: right;
+            font-size: 0.7rem;
+            font-weight: bold;
+            width: 100%;
+          }
+        }
+        .thisUserMessage {
+          display: flex;
+          justify-content: right;
+          width: 100%;
+          height: fit-content;
+          .message {
+            background-color: $boldColor;
+            .name {
+              color: $normalColor;
+            }
+            .lowestMessageBlock {
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+              .deleteButton {
+                background-color: transparent;
+                border: none;
+                color: $normalColor;
+                span {
+                  font-size: 0.9rem;
+                }
+                transition: color 0.2s ease-out;
+                &:hover {
+                  color: $errorColor;
+                  cursor: pointer;
+                }
+              }
+              .date {
+                color: $normalColor;
+              }
+            }
+          }
+        }
+        .otherUserMessage {
+          display: flex;
+          justify-content: left;
+          align-items: flex-start;
+          width: 100%;
+          height: fit-content;
+          .message {
+            background-color: $normalColor;
+            .name {
+              color: $boldColor;
+              &:hover {
+                color: $lightestColor;
+              }
+            }
+            .date {
+              color: $boldColor;
+            }
+          }
+        }
+      }
+    }
+    .messageEnterBlock {
+      display: flex;
+      justify-content: space-between;
+      width: 40vw;
+      height: 10vh;
+      margin: 0 1vw;
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $lightestColor;
+        border-radius: $borderRadius;
+        box-shadow: $boxShadow;
+        width: 30vw;
+        @include inputStyle($width: 28vw);
+        padding: 1vw;
+        padding-top: 2vw;
+      }
+      button {
+        @include buttonStyle(
+          $normalColor,
+          $boldColor,
+          $lightestColor,
+          $lightestColor
+        );
+        margin: 1vw;
+        width: fit-content;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .chatBlock {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .block {
+      margin: 1vw;
+    }
+    .header {
+      @include headerStyle;
+    }
+    .mainBlock {
+      display: flex;
+      width: 40vw;
+      height: 80vh;
+      flex-direction: column;
+      box-shadow: none;
+      .chat {
+        width: 40vw;
+        height: 63vh;
+        display: flex;
+        flex-direction: column;
+        background-color: $lightestColor;
+        border-radius: $borderRadius;
+        box-shadow: $boxShadow;
+        padding: 1vw;
+        .chatMessages {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          width: 38vw;
+          height: 55vh;
+          overflow-y: auto;
+          .avatar {
+            display: flex;
+            width: fit-content;
+            height: fit-content;
+            img {
+              width: 2.2vw;
+              height: 2.2vw;
+              margin: 0.5vw 0;
+              object-fit: cover;
+              border-radius: $borderRadius;
+            }
+          }
+          .message {
+            display: flex;
+            flex-direction: column;
+            padding: 0.5vw;
+            margin: 0.5vw;
+            max-height: 35vh;
+            max-width: 20vw;
+            width: fit-content;
+            min-width: 10vw;
+            width: 10vw;
+            height: fit-content;
+            border-radius: $borderRadius;
+            .name {
+              display: flex;
+              justify-content: left;
+              font-size: 0.7rem;
+              font-weight: bold;
+              width: 100%;
+              text-decoration: none;
+              transition: color 0.2s ease-out;
+            }
+            .text {
+              display: flex;
+              justify-content: left;
+              width: 100%;
+              word-break: break-all;
+              color: $lightestColor;
+              font-size: 0.9rem;
+            }
+            .date {
+              display: flex;
+              justify-content: right;
+              font-size: 0.6rem;
+              font-weight: bold;
+              width: 100%;
+            }
+          }
+          .thisUserMessage {
+            display: flex;
+            justify-content: right;
+            width: 100%;
+            height: fit-content;
+            .message {
+              background-color: $boldColor;
+              .name {
+                color: $normalColor;
+              }
+              .lowestMessageBlock {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                .deleteButton {
+                  background-color: transparent;
+                  border: none;
+                  color: $normalColor;
+                  span {
+                    font-size: 0.9rem;
+                  }
+                  transition: color 0.2s ease-out;
+                  &:hover {
+                    color: $errorColor;
+                    cursor: pointer;
+                  }
+                }
+                .date {
+                  color: $normalColor;
+                }
+              }
+            }
+          }
+          .otherUserMessage {
+            display: flex;
+            justify-content: left;
+            align-items: flex-start;
+            width: 100%;
+            height: fit-content;
+            .message {
+              background-color: $normalColor;
+              .name {
+                color: $boldColor;
+                &:hover {
+                  color: $lightestColor;
+                }
+              }
+              .date {
+                color: $boldColor;
+              }
+            }
+          }
+        }
+      }
+      .messageEnterBlock {
+        display: flex;
+        justify-content: space-between;
+        width: 40vw;
+        height: 10vh;
+        margin: 0 1vw;
+        form {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: $lightestColor;
+          border-radius: $borderRadius;
+          box-shadow: $boxShadow;
+          width: 30vw;
+          @include inputStyle(
+            $width: 28vw,
+            $strokeHeight: 0.42vh,
+            $fontSizeText: 1rem,
+            $fontSizeLabel: 1.2rem
+          );
+          padding: 1vw;
+          padding-top: 3vw;
+        }
+        button {
+          @include buttonStyle(
+            $normalColor,
+            $boldColor,
+            $lightestColor,
+            $lightestColor,
+            $fontSize: 1.2rem
+          );
+          display: flex;
+          justify-content: center;
+          margin: 1vw;
+          width: fit-content;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .chatBlock {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .block {
+      margin: 1vw;
+    }
+    .header {
+      @include headerStyle;
+    }
+    .mainBlock {
+      display: flex;
+      width: 90vw;
+      height: 80vh;
+      flex-direction: column;
+      box-shadow: none;
+      .chat {
+        width: 90vw;
+        height: 63vh;
+        display: flex;
+        flex-direction: column;
+        background-color: $lightestColor;
+        border-radius: $borderRadius;
+        box-shadow: $boxShadow;
+        padding: 1vw;
+        .chatMessages {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          width: 90vw;
+          height: 55vh;
+          padding: 3vw;
+          overflow-y: auto;
+          .avatar {
+            display: flex;
+            width: fit-content;
+            height: fit-content;
+            img {
+              width: 7vw;
+              height: 7vw;
+              margin: 1.5vw 0;
+              object-fit: cover;
+              border-radius: $borderRadius;
+            }
+          }
+          .message {
+            display: flex;
+            flex-direction: column;
+            padding: 1.5vw;
+            margin: 1.5vw;
+            max-height: 75vh;
+            max-width: 35vw;
+            width: fit-content;
+            min-width: 35vw;
+            height: fit-content;
+            border-radius: $borderRadius;
+            .name {
+              display: flex;
+              justify-content: left;
+              font-size: 0.7rem;
+              font-weight: bold;
+              width: 100%;
+              text-decoration: none;
+              transition: color 0.2s ease-out;
+            }
+            .text {
+              display: flex;
+              justify-content: left;
+              width: 100%;
+              word-break: break-all;
+              color: $lightestColor;
+              font-size: 0.8rem;
+            }
+            .date {
+              display: flex;
+              justify-content: right;
+              font-size: 0.6rem;
+              font-weight: bold;
+              width: 100%;
+            }
+          }
+          .thisUserMessage {
+            display: flex;
+            justify-content: right;
+            width: 100%;
+            height: fit-content;
+            .message {
+              background-color: $boldColor;
+              .name {
+                color: $normalColor;
+              }
+              .lowestMessageBlock {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                .deleteButton {
+                  background-color: transparent;
+                  border: none;
+                  color: $normalColor;
+                  span {
+                    font-size: 0.9rem;
+                  }
+                  transition: color 0.2s ease-out;
+                  &:hover {
+                    color: $errorColor;
+                    cursor: pointer;
+                  }
+                }
+                .date {
+                  color: $normalColor;
+                }
+              }
+            }
+          }
+          .otherUserMessage {
+            display: flex;
+            justify-content: left;
+            align-items: flex-start;
+            width: 100%;
+            height: fit-content;
+            .message {
+              background-color: $normalColor;
+              .name {
+                color: $boldColor;
+                &:hover {
+                  color: $lightestColor;
+                }
+              }
+              .date {
+                color: $boldColor;
+              }
+            }
+          }
+        }
+      }
+      .messageEnterBlock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 90vw;
+        height: 30vh;
+        margin: 0 1vw;
+        padding-bottom: 55vh;
+        form {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: $lightestColor;
+          border-radius: $borderRadius;
+          box-shadow: $boxShadow;
+          width: 90vw;
+          height: 10vh;
+          @include inputStyle(
+            $width: 80vw,
+            $strokeHeight: 0.42vh,
+            $fontSizeText: 1rem,
+            $fontSizeLabel: 1.2rem
+          );
+          padding: 1vw;
+          padding-top: 8vw;
+        }
+        button {
+          @include buttonStyle(
+            $normalColor,
+            $boldColor,
+            $lightestColor,
+            $lightestColor,
+            $fontSize: 1.2rem
+          );
+          height: 7vh;
+          display: flex;
+          justify-content: center;
+          margin: 2vw 5vw;
+          width: fit-content;
+        }
+      }
+    }
+  }
+}

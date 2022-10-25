@@ -1,0 +1,25 @@
+//colors
+$lightestColor: white;
+$lightColor: #dcf9d7; //#A6ABBD
+$normalColor: rgb(144, 183, 136); //#A5F79E
+$boldColor: rgb(62, 74, 60); //#F76182
+$errorColor: red;
+$goodMarkColor: rgb(136, 183, 148);
+$mehMarkColor: #b7b688;
+$badMarkColor: rgb(183, 136, 136);
+//#A6ABBD #fb9
+
+//fonts
+$mainFont: Nunito, sans-serif;
+
+//animation
+$animatedLine: 0.1s linear forwards;
+
+//borders
+$borderRadius: 0.2rem;
+
+//box-shadow
+$boxShadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+//transitions
+$buttonTransition: transform 0.1s ease-out, background-color 0.1s ease-out;

@@ -1,0 +1,542 @@
+@import '../variables.scss';
+@import '../mixins/inputMixin.scss';
+
+.albumDescriptionBlock {
+  display: flex;
+  justify-content: center;
+  .block {
+    margin: 1vw;
+  }
+  .albumDetails {
+    background-color: $lightestColor;
+    box-shadow: $boxShadow;
+    width: 20vw;
+    border-radius: $borderRadius;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.2rem;
+    padding-bottom: 2rem;
+    table {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      tr {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        td {
+          padding: 0.5rem;
+          .albumDetailsInputHeader {
+            display: block;
+            color: $boldColor;
+            font-weight: 800;
+            transform: translateY(0.8vh);
+            word-wrap: break-word;
+          }
+          .albumDetailsInputText {
+            @include inputStyle(10vw, 0.32vh);
+          }
+        }
+        td:first-child {
+          width: 5vw;
+        }
+      }
+    }
+  }
+  .albumTagBlock {
+    display: flex;
+    flex-direction: column;
+    background-color: $lightestColor;
+    box-shadow: $boxShadow;
+    border-radius: $borderRadius;
+    padding: 0.5rem;
+    width: 20vw;
+    margin-top: 1vh;
+    .albumTag {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: inherit;
+      .tag {
+        background-color: $normalColor;
+        font-weight: bold;
+        color: $lightestColor;
+        border-radius: $borderRadius;
+        padding: 0.5rem;
+        margin: 0.5rem;
+      }
+    }
+  }
+  .albumCredits {
+    width: 20vw;
+    background-color: $lightestColor;
+    box-shadow: $boxShadow;
+    border-radius: $borderRadius;
+    overflow-y: auto;
+    max-height: 100%;
+    div {
+      display: flex;
+      justify-content: center;
+      #credits {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        tr {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          td {
+            padding: 0.5rem;
+            &.creditPersonName {
+              display: block;
+              color: $boldColor;
+              font-weight: 800;
+              word-wrap: break-word;
+              font-size: 1.2rem;
+            }
+            .creditPersonRole {
+              background-color: $normalColor;
+              font-weight: bold;
+              color: $lightestColor;
+              border-radius: $borderRadius;
+              padding: 0.5rem;
+              text-align: center;
+            }
+          }
+          td:first-child {
+            width: 60%;
+            display: flex;
+            justify-content: left;
+          }
+          td:last-child {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+  .albumTracks {
+    width: 30vw;
+    background-color: $lightestColor;
+    box-shadow: $boxShadow;
+    border-radius: $borderRadius;
+    max-height: 70vh;
+    overflow-y: auto;
+    table {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      flex-direction: column;
+      tr {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+        padding: 0.5rem;
+        td {
+          font-size: 1.1rem;
+          color: $boldColor;
+          display: flex;
+          justify-content: center;
+          &.trackOrder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2vw;
+            height: 2vw;
+            font-size: 1rem;
+            background-color: $boldColor;
+            font-weight: bold;
+            color: $lightestColor;
+            border-radius: $borderRadius;
+            padding: 0.3rem;
+          }
+          &.trackName {
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 800;
+          }
+          &.trackLength {
+            width: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .albumDescriptionBlock {
+    display: flex;
+    justify-content: center;
+    .header {
+      font-size: 1.5rem;
+    }
+    .block {
+      margin: 1vw;
+    }
+    .albumDetails {
+      background-color: $lightestColor;
+      box-shadow: $boxShadow;
+      width: 20vw;
+      border-radius: $borderRadius;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 1rem;
+      padding-bottom: 2rem;
+      table {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        tr {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: left;
+          td {
+            padding: 0.5rem;
+            .albumDetailsInputHeader {
+              display: block;
+              color: $boldColor;
+              font-weight: 800;
+              transform: translateY(0.8vh);
+              word-wrap: break-word;
+            }
+            .albumDetailsInputText {
+              @include inputStyle(10vw, 0.32vh, $fontSizeText: 1rem);
+            }
+          }
+          td:first-child {
+            width: 6vw;
+          }
+        }
+      }
+    }
+    .albumTagBlock {
+      display: flex;
+      flex-direction: column;
+      background-color: $lightestColor;
+      box-shadow: $boxShadow;
+      border-radius: $borderRadius;
+      padding: 0.5rem;
+      width: 20vw;
+      margin-top: 1vh;
+      .albumTag {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: inherit;
+        .tag {
+          background-color: $normalColor;
+          font-weight: bold;
+          color: $lightestColor;
+          border-radius: $borderRadius;
+          padding: 0.5rem;
+          margin: 0.5rem;
+          font-size: 0.9rem;
+        }
+      }
+    }
+    .albumCredits {
+      width: 20vw;
+      background-color: $lightestColor;
+      box-shadow: $boxShadow;
+      border-radius: $borderRadius;
+      overflow-y: auto;
+      max-height: 100%;
+      div {
+        display: flex;
+        justify-content: center;
+        #credits {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          tr {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            td {
+              padding: 0.5rem;
+              &.creditPersonName {
+                display: block;
+                color: $boldColor;
+                font-weight: 800;
+                word-wrap: break-word;
+                font-size: 1rem;
+              }
+              .creditPersonRole {
+                background-color: $normalColor;
+                font-weight: bold;
+                color: $lightestColor;
+                border-radius: $borderRadius;
+                padding: 0.5rem;
+                text-align: center;
+                font-size: 0.9rem;
+              }
+            }
+            td:first-child {
+              width: 60%;
+              display: flex;
+              justify-content: left;
+            }
+            td:last-child {
+              width: 40%;
+              display: flex;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+    .albumTracks {
+      width: 30vw;
+      background-color: $lightestColor;
+      box-shadow: $boxShadow;
+      border-radius: $borderRadius;
+      max-height: 70vh;
+      overflow-y: auto;
+      table {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        tr {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 75%;
+          padding: 0.5rem;
+          td {
+            font-size: 1rem;
+            color: $boldColor;
+            display: flex;
+            justify-content: center;
+            &.trackOrder {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 2vw;
+              height: 2vw;
+              font-size: 0.9rem;
+              background-color: $boldColor;
+              font-weight: bold;
+              color: $lightestColor;
+              border-radius: $borderRadius;
+              padding: 0.3rem;
+            }
+            &.trackName {
+              width: 90%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-weight: 800;
+            }
+            &.trackLength {
+              width: 10%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .albumDescriptionBlock {
+    display: flex;
+    flex-direction: column;
+    .header {
+      font-size: 1.5rem;
+    }
+    .block {
+      margin: 1vw;
+    }
+    .albumDetails {
+      background-color: $lightestColor;
+      box-shadow: $boxShadow;
+      width: 90vw;
+      border-radius: $borderRadius;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 1rem;
+      padding-bottom: 2rem;
+      table {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        tr {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: left;
+          td {
+            padding: 0.5rem;
+            .albumDetailsInputHeader {
+              display: block;
+              color: $boldColor;
+              font-weight: 800;
+              transform: translateY(0.8vh);
+              word-wrap: break-word;
+            }
+            .albumDetailsInputText {
+              @include inputStyle(40vw, 0.32vh, $fontSizeText: 1rem);
+            }
+          }
+          td:first-child {
+            width: 30vw;
+          }
+        }
+      }
+    }
+    .albumTagBlock {
+      display: flex;
+      flex-direction: column;
+      background-color: $lightestColor;
+      box-shadow: $boxShadow;
+      border-radius: $borderRadius;
+      padding: 0.5rem;
+      width: 90vw;
+      margin-top: 1vh;
+      .albumTag {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: inherit;
+        .tag {
+          background-color: $normalColor;
+          font-weight: bold;
+          color: $lightestColor;
+          border-radius: $borderRadius;
+          padding: 0.5rem;
+          margin: 0.5rem;
+          font-size: 0.9rem;
+        }
+      }
+    }
+    .albumCredits {
+      width: 90vw;
+      background-color: $lightestColor;
+      box-shadow: $boxShadow;
+      border-radius: $borderRadius;
+      overflow-y: auto;
+      max-height: 100%;
+      div {
+        display: flex;
+        justify-content: center;
+        #credits {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          tr {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            td {
+              padding: 0.5rem;
+              &.creditPersonName {
+                display: block;
+                color: $boldColor;
+                font-weight: 800;
+                word-wrap: break-word;
+                font-size: 1rem;
+              }
+              .creditPersonRole {
+                background-color: $normalColor;
+                font-weight: bold;
+                color: $lightestColor;
+                border-radius: $borderRadius;
+                padding: 0.5rem;
+                text-align: center;
+                font-size: 0.9rem;
+              }
+            }
+            td:first-child {
+              width: 60%;
+              display: flex;
+              justify-content: left;
+            }
+            td:last-child {
+              width: 40%;
+              display: flex;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+    .albumTracks {
+      width: 90vw;
+      background-color: $lightestColor;
+      box-shadow: $boxShadow;
+      border-radius: $borderRadius;
+      max-height: 100%;
+      overflow-y: auto;
+      margin-bottom: 30vh;
+      table {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        tr {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 75%;
+          padding: 0.5rem;
+          td {
+            font-size: 1rem;
+            color: $boldColor;
+            display: flex;
+            justify-content: center;
+            &.trackOrder {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 7vw;
+              height: 7vw;
+              font-size: 0.8rem;
+              background-color: $boldColor;
+              font-weight: bold;
+              color: $lightestColor;
+              border-radius: $borderRadius;
+              padding: 0.3rem;
+            }
+            &.trackName {
+              width: 90%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-weight: 800;
+            }
+            &.trackLength {
+              width: 10%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

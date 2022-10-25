@@ -1,0 +1,43 @@
+@import '../variables.scss';
+@import '../mixins/buttonMixin.scss';
+
+.moderatorFunctionsBlock {
+  height: inherit;
+  width: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 2vw;
+  a {
+    @include buttonStyle(
+      $normalColor,
+      $boldColor,
+      $lightestColor,
+      $lightestColor
+    );
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .moderatorFunctionsBlock {
+    height: inherit;
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 2vw;
+    a {
+      @include buttonStyle(
+        $normalColor,
+        $boldColor,
+        $lightestColor,
+        $lightestColor,
+        $fontSize: 1.4rem
+      );
+      text-decoration: none;
+    }
+  }
+}

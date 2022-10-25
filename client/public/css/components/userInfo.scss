@@ -1,0 +1,733 @@
+@import '../variables.scss';
+@import '../mixins/inputMixin.scss';
+@import '../mixins/buttonMixin.scss';
+@import '../mixins/arrowMixin.scss';
+
+.userInfoBlock {
+  height: inherit;
+  width: 25vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .userInfoElement {
+    margin: 1vh;
+  }
+  .avatar {
+    width: 17vw;
+    display: flex;
+    justify-content: center;
+    border-radius: $borderRadius;
+    background-color: $lightestColor;
+    box-shadow: $boxShadow;
+    img {
+      margin: 1vw;
+      height: 30vh;
+      width: 30vh;
+      border-radius: $borderRadius;
+      overflow: hidden;
+      object-fit: cover;
+    }
+  }
+  .infoBlock {
+    width: inherit;
+    border-radius: $borderRadius;
+    background-color: $lightestColor;
+    box-shadow: $boxShadow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .mainInfoBlock {
+    .mainInfoElement {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 2vh;
+      .mainInfoHeader {
+        font-weight: 800;
+        font-size: 0.9rem;
+        color: $normalColor;
+      }
+      .mainInfoText {
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: boldColor;
+      }
+    }
+  }
+  .otherInfoBlock {
+    .otherInfoHeaderBlock {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $normalColor;
+      font-weight: 800;
+      font-size: 1.5rem;
+      padding: 1rem;
+      text-align: center;
+      flex-wrap: wrap;
+      .otherInfoArrow {
+        @include arrowStyle;
+      }
+    }
+    .otherInfoMainBlock {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 1.2rem;
+      padding-bottom: 2rem;
+      table {
+        tr {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: left;
+          td {
+            padding: 0.5rem;
+            .otherInfoMainHeader {
+              display: block;
+              color: $boldColor;
+              font-weight: 800;
+              transform: translateY(0.8vh);
+              word-wrap: break-word;
+            }
+            .otherInfoMainText {
+              @include inputStyle(12vw, 0.32vh);
+            }
+          }
+          td:first-child {
+            width: 7vw;
+          }
+        }
+      }
+      #contactInfo,
+      #locationInfo,
+      #additionalInfo {
+        display: none;
+        transform: scale(0);
+      }
+      button {
+        @include buttonStyle(
+          $normalColor,
+          $boldColor,
+          $lightestColor,
+          $lightestColor,
+          12vw,
+          1.1rem
+        );
+        display: none;
+      }
+    }
+    .hideUserInfoBlockAnimation {
+      animation: hideUserInfoBlock 0.3s forwards linear;
+    }
+    .showUserInfoBlockAnimation {
+      //display: flex;
+      animation: showUserInfoBlock 0.3s forwards linear;
+    }
+  }
+  @keyframes hideUserInfoBlock {
+    to {
+      transform: scale(0);
+    }
+  }
+  @keyframes showUserInfoBlock {
+    to {
+      transform: scale(1);
+    }
+  }
+}
+
+@media screen and (max-width: 1850px) {
+  .userInfoBlock {
+    .otherInfoBlock {
+      .otherInfoHeaderBlock {
+        font-weight: 800;
+        font-size: 1.3rem;
+        padding: 0.8rem;
+        .otherInfoArrow {
+          @include arrowStyle;
+        }
+      }
+      .otherInfoMainBlock {
+        font-size: 1.1rem;
+        padding-bottom: 1rem;
+        table {
+          tr {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+            td {
+              padding: 0.5rem;
+              .otherInfoMainHeader {
+                display: block;
+                color: $boldColor;
+                font-weight: 800;
+                transform: translateY(0.8vh);
+                word-wrap: break-word;
+              }
+              .otherInfoMainText {
+                @include inputStyle(12vw, 0.32vh);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .userInfoBlock {
+    height: inherit;
+    width: 25vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .userInfoElement {
+      margin: 1vh;
+    }
+    .avatar {
+      width: 17vw;
+      display: flex;
+      justify-content: center;
+      border-radius: $borderRadius;
+      background-color: $lightestColor;
+      box-shadow: $boxShadow;
+      img {
+        margin: 1vw;
+        height: 30vh;
+        width: 35vh;
+        border-radius: $borderRadius;
+        overflow: hidden;
+        object-fit: cover;
+      }
+    }
+    .mainInfoBlock {
+      .mainInfoElement {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1vh;
+        .mainInfoHeader {
+          font-weight: 800;
+          font-size: 0.8rem;
+          color: $normalColor;
+        }
+        .mainInfoText {
+          font-size: 1.1rem;
+          font-weight: 800;
+          color: boldColor;
+        }
+      }
+    }
+    .otherInfoBlock {
+      .otherInfoHeaderBlock {
+        font-weight: 800;
+        font-size: 1.2rem;
+        padding: 0.8rem;
+        .otherInfoArrow {
+          @include arrowStyle;
+        }
+      }
+      .otherInfoMainBlock {
+        font-size: 1rem;
+        padding-bottom: 1rem;
+        table {
+          tr {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+            td {
+              padding: 0.5rem;
+              .otherInfoMainHeader {
+                display: block;
+                color: $boldColor;
+                font-weight: 800;
+                transform: translateY(0.8vh);
+                word-wrap: break-word;
+              }
+              .otherInfoMainText {
+                @include inputStyle(12vw, 0.32vh, $fontSizeText: 1rem);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .userInfoBlock {
+    height: inherit;
+    width: 25vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .userInfoElement {
+      margin: 1vh;
+    }
+    .avatar {
+      width: 17vw;
+      display: flex;
+      justify-content: center;
+      border-radius: $borderRadius;
+      background-color: $lightestColor;
+      box-shadow: $boxShadow;
+      img {
+        margin: 1vw;
+        height: 30vh;
+        width: 30vh;
+        border-radius: $borderRadius;
+        overflow: hidden;
+        object-fit: cover;
+      }
+    }
+    .infoBlock {
+      width: inherit;
+      border-radius: $borderRadius;
+      background-color: $lightestColor;
+      box-shadow: $boxShadow;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .mainInfoBlock {
+      .mainInfoElement {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2vh;
+        .mainInfoHeader {
+          font-weight: 800;
+          font-size: 0.9rem;
+          color: $normalColor;
+        }
+        .mainInfoText {
+          font-size: 1.2rem;
+          font-weight: 800;
+          color: boldColor;
+        }
+      }
+    }
+    .otherInfoBlock {
+      .otherInfoHeaderBlock {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $normalColor;
+        font-weight: 800;
+        font-size: 1.1rem;
+        padding: 0.3rem;
+        text-align: center;
+        flex-wrap: wrap;
+        .otherInfoArrow {
+          @include arrowStyle(2rem);
+        }
+      }
+      .otherInfoMainBlock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 1rem;
+        padding-bottom: 1rem;
+        table {
+          tr {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+            td {
+              padding: 0.1rem;
+              .otherInfoMainHeader {
+                display: block;
+                color: $boldColor;
+                font-weight: 800;
+                transform: translateY(0.8vh);
+                word-wrap: break-word;
+              }
+              .otherInfoMainText {
+                @include inputStyle(12vw, 0.32vh, $fontSizeText: 0.9rem);
+              }
+            }
+            td:first-child {
+              width: 7vw;
+            }
+          }
+        }
+        #contactInfo,
+        #locationInfo,
+        #additionalInfo {
+          display: none;
+          transform: scale(0);
+        }
+        button {
+          @include buttonStyle(
+            $normalColor,
+            $boldColor,
+            $lightestColor,
+            $lightestColor,
+            12vw,
+            1.1rem
+          );
+          display: none;
+        }
+      }
+      .hideUserInfoBlockAnimation {
+        animation: hideUserInfoBlock 0.3s forwards linear;
+      }
+      .showUserInfoBlockAnimation {
+        //display: flex;
+        animation: showUserInfoBlock 0.3s forwards linear;
+      }
+    }
+    @keyframes hideUserInfoBlock {
+      to {
+        transform: scale(0);
+      }
+    }
+    @keyframes showUserInfoBlock {
+      to {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .userInfoBlock {
+    height: inherit;
+    width: 25vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .userInfoElement {
+      margin: 1vh;
+    }
+    .avatar {
+      width: 17vw;
+      display: flex;
+      justify-content: center;
+      border-radius: $borderRadius;
+      background-color: $lightestColor;
+      box-shadow: $boxShadow;
+      img {
+        margin: 1vw;
+        height: 30vh;
+        width: 30vh;
+        border-radius: $borderRadius;
+        overflow: hidden;
+        object-fit: cover;
+      }
+    }
+    .infoBlock {
+      width: inherit;
+      border-radius: $borderRadius;
+      background-color: $lightestColor;
+      box-shadow: $boxShadow;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .mainInfoBlock {
+      .mainInfoElement {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2vh;
+        .mainInfoHeader {
+          font-weight: 800;
+          font-size: 0.8rem;
+          color: $normalColor;
+        }
+        .mainInfoText {
+          font-size: 1.1rem;
+          font-weight: 800;
+          color: boldColor;
+        }
+      }
+    }
+    .otherInfoBlock {
+      .otherInfoHeaderBlock {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $normalColor;
+        font-weight: 800;
+        font-size: 1rem;
+        padding: 0.3rem;
+        text-align: center;
+        flex-wrap: wrap;
+        .otherInfoArrow {
+          @include arrowStyle(1.7rem);
+          padding: 0;
+          margin: 0.6vw;
+        }
+      }
+      .otherInfoMainBlock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 0.9rem;
+        padding-bottom: 1rem;
+        table {
+          tr {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+            td {
+              padding: 0.1rem;
+              .otherInfoMainHeader {
+                display: block;
+                color: $boldColor;
+                font-weight: 800;
+                transform: translateY(0.8vh);
+                word-wrap: break-word;
+              }
+              .otherInfoMainText {
+                @include inputStyle(12vw, 0.32vh, $fontSizeText: 0.9rem);
+              }
+            }
+            td:first-child {
+              width: 7vw;
+            }
+          }
+        }
+        #contactInfo,
+        #locationInfo,
+        #additionalInfo {
+          display: none;
+          transform: scale(0);
+        }
+        button {
+          @include buttonStyle(
+            $normalColor,
+            $boldColor,
+            $lightestColor,
+            $lightestColor,
+            12vw,
+            1.1rem
+          );
+          display: none;
+        }
+      }
+      .hideUserInfoBlockAnimation {
+        animation: hideUserInfoBlock 0.3s forwards linear;
+      }
+      .showUserInfoBlockAnimation {
+        //display: flex;
+        animation: showUserInfoBlock 0.3s forwards linear;
+      }
+    }
+    @keyframes hideUserInfoBlock {
+      to {
+        transform: scale(0);
+      }
+    }
+    @keyframes showUserInfoBlock {
+      to {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .userInfoBlock {
+    .otherInfoBlock {
+      overflow-y: auto;
+      .otherInfoHeaderBlock {
+        font-weight: 800;
+        font-size: 1.1rem;
+        padding: 0.2rem;
+        word-wrap: break-word;
+        display: flex;
+        flex-direction: column;
+        .otherInfoArrow {
+          @include arrowStyle(2rem);
+        }
+      }
+      .otherInfoMainBlock {
+        font-size: 1rem;
+        padding-bottom: 1rem;
+        table {
+          tr {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 100%;
+            td {
+              padding: 0.5rem;
+              .otherInfoMainHeader {
+                word-wrap: break-word;
+                width: 15vw;
+              }
+              .otherInfoMainText {
+                @include inputStyle(15vw, 0.42vh, $fontSizeText: 1rem);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .userInfoBlock {
+    // height: 200vh;
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    // margin-top: 140vh;
+    .userInfoElement {
+      margin: 1vh;
+    }
+    .avatar {
+      width: 55vw;
+      display: flex;
+      justify-content: center;
+      border-radius: $borderRadius;
+      background-color: $lightestColor;
+      box-shadow: $boxShadow;
+      img {
+        margin: 1vw;
+        height: 30vh;
+        width: 30vh;
+        border-radius: $borderRadius;
+        overflow: hidden;
+        object-fit: cover;
+      }
+    }
+    .infoBlock {
+      width: inherit;
+      border-radius: $borderRadius;
+      background-color: $lightestColor;
+      box-shadow: $boxShadow;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .mainInfoBlock {
+      .mainInfoElement {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2vh;
+        .mainInfoHeader {
+          font-weight: 800;
+          font-size: 0.9rem;
+          color: $normalColor;
+        }
+        .mainInfoText {
+          font-size: 1.2rem;
+          font-weight: 800;
+          color: $boldColor;
+        }
+      }
+    }
+    .otherInfoBlock {
+      .otherInfoHeaderBlock {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        color: $normalColor;
+        font-weight: 800;
+        font-size: 1rem;
+        padding: 1rem;
+        text-align: center;
+        // flex-wrap: wrap;
+        .otherInfoArrow {
+          @include arrowStyle(2rem);
+          margin: 2vw;
+          padding: 1vw;
+          padding-bottom: 1.5vw;
+        }
+      }
+      .otherInfoMainBlock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 1.2rem;
+        padding-bottom: 2rem;
+        table {
+          tr {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: left;
+            width: 70vw;
+            td {
+              padding: 0.3rem;
+              .otherInfoMainHeader {
+                display: block;
+                color: $boldColor;
+                font-weight: 800;
+                transform: translateY(0.8vh);
+                word-wrap: normal;
+              }
+              .otherInfoMainText {
+                @include inputStyle(32vw, 0.32vh);
+              }
+            }
+            td:first-child {
+              width: 40vw;
+            }
+          }
+        }
+        #contactInfo,
+        #locationInfo,
+        #additionalInfo {
+          display: none;
+          transform: scale(0);
+        }
+        button {
+          @include buttonStyle(
+            $normalColor,
+            $boldColor,
+            $lightestColor,
+            $lightestColor,
+            12vw,
+            1.1rem
+          );
+          display: none;
+        }
+      }
+      .hideUserInfoBlockAnimation {
+        animation: hideUserInfoBlock 0.3s forwards linear;
+      }
+      .showUserInfoBlockAnimation {
+        //display: flex;
+        animation: showUserInfoBlock 0.3s forwards linear;
+      }
+    }
+    @keyframes hideUserInfoBlock {
+      to {
+        transform: scale(0);
+      }
+    }
+    @keyframes showUserInfoBlock {
+      to {
+        transform: scale(1);
+      }
+    }
+  }
+}

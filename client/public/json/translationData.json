@@ -1,0 +1,10 @@
+{
+  "accountPage": {
+    "english": {
+      "reviewsCountLabel": "Reviews" 
+    },
+    "ukrainian": {
+      "reviewsCountLabel": "Відгуків" 
+    }
+  }
+}

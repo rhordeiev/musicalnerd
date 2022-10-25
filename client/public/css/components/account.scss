@@ -1,0 +1,273 @@
+@import '../variables.scss';
+@import '../mixins/inputMixin.scss';
+@import '../mixins/buttonMixin.scss';
+
+.mainBlock {
+  display: flex;
+  width: 50vw;
+  height: 60vh;
+  z-index: 0;
+  box-shadow: $boxShadow;
+  &#loginInfoRegisterBlock,
+  &#personalInfoRegisterBlock,
+  &#contactInfoRegisterBlock,
+  &#locationInfoRegisterBlock,
+  &#avatarRegisterBlock,
+  &#additionalInfoRegisterBlock {
+    display: none;
+  }
+  div {
+    display: flex;
+    width: 50%;
+    height: inherit;
+    justify-content: center;
+  }
+  .inputsBlock {
+    background-color: $lightestColor;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: $borderRadius;
+    border-bottom-left-radius: $borderRadius;
+    form {
+      display: flex;
+      flex-direction: column;
+      @include inputStyle;
+      .previousButton {
+        @include buttonStyle(
+          transparent,
+          transparent,
+          $normalColor,
+          $boldColor
+        );
+      }
+      .nextButton {
+        @include buttonStyle(
+          $normalColor,
+          $boldColor,
+          $lightestColor,
+          $lightestColor
+        );
+      }
+    }
+  }
+  .asideBlock {
+    background-image: url('../../images/background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: $normalColor;
+    color: $lightestColor;
+    border-top-right-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    .registerText {
+      word-wrap: break-word;
+      text-align: center;
+      background-color: $normalColor;
+      width: 80%;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-align: center;
+      color: $lightestColor;
+      border: 0.5rem solid $lightestColor;
+      box-shadow: $boxShadow;
+      transform: scale(1);
+      transition: transform 0.1s ease-out, background-color 0.1s ease-out;
+      border-radius: $borderRadius;
+      &:hover {
+        transform: scale(1.1);
+        background-color: $boldColor;
+        cursor: pointer;
+      }
+    }
+  }
+  @keyframes toNext {
+    0% {
+      width: 0vw;
+    }
+    50% {
+      width: 50vw;
+    }
+    100% {
+      width: 0vw;
+    }
+  }
+}
+
+@media screen and (max-width: 1730px) {
+  .mainBlock {
+    .asideBlock {
+      .registerText {
+        font-size: 2rem;
+        border: 0.4rem solid $lightestColor;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .mainBlock {
+    .inputsBlock {
+      form {
+        @include inputStyle(
+          $width: 15vw,
+          $strokeHeight: 0.2rem,
+          $fontSizeText: 1rem,
+          $fontSizeLabel: 1.2rem,
+          $padding: 0.1rem
+        );
+        .previousButton {
+          @include buttonStyle(
+            transparent,
+            transparent,
+            $normalColor,
+            $boldColor,
+            15vw,
+            1.3rem
+          );
+        }
+        .nextButton {
+          @include buttonStyle(
+            $normalColor,
+            $boldColor,
+            $lightestColor,
+            $lightestColor,
+            15vw,
+            1.3rem
+          );
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .mainBlock {
+    .asideBlock {
+      .registerText {
+        font-size: 1.7rem;
+        border: 0.35rem solid $lightestColor;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .mainBlock {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 80vh;
+    z-index: 0;
+    box-shadow: $boxShadow;
+    &#loginInfoRegisterBlock,
+    &#personalInfoRegisterBlock,
+    &#contactInfoRegisterBlock,
+    &#locationInfoRegisterBlock,
+    &#avatarRegisterBlock,
+    &#additionalInfoRegisterBlock {
+      display: none;
+    }
+    div {
+      display: flex;
+      width: 100%;
+      height: inherit;
+      justify-content: center;
+    }
+    .inputsBlock {
+      background-color: $lightestColor;
+      display: flex;
+      align-items: center;
+      border-top-left-radius: $borderRadius;
+      border-bottom-left-radius: $borderRadius;
+      form {
+        display: flex;
+        flex-direction: column;
+        @include inputStyle(
+          $width: 60vw,
+          $fontSizeText: 1.2rem,
+          $fontSizeLabel: 1.4rem,
+          $strokeHeight: 0.3vh,
+          $labelTop: -2.4rem,
+          $labelTopActive: -3.5rem,
+          $padding: 0.2rem
+        );
+        padding-top: 5vw;
+        .previousButton {
+          @include buttonStyle(
+            transparent,
+            transparent,
+            $normalColor,
+            $boldColor,
+            $fontSize: 1.2rem
+          );
+          padding: 0.1vw;
+          width: 60vw;
+        }
+        .nextButton {
+          @include buttonStyle(
+            $normalColor,
+            $boldColor,
+            $lightestColor,
+            $lightestColor,
+            $fontSize: 1.2rem
+          );
+          padding: 0.5vw;
+          width: 60vw;
+        }
+      }
+    }
+    .asideBlock {
+      background-image: url('../../images/background.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-color: $normalColor;
+      color: $lightestColor;
+      border-top-right-radius: $borderRadius;
+      border-bottom-right-radius: $borderRadius;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      .registerText {
+        word-wrap: break-word;
+        text-align: center;
+        background-color: $normalColor;
+        width: 80%;
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-align: center;
+        color: $lightestColor;
+        border: 0.3rem solid $lightestColor;
+        box-shadow: $boxShadow;
+        transform: scale(1);
+        transition: transform 0.1s ease-out, background-color 0.1s ease-out;
+        border-radius: $borderRadius;
+        &:hover {
+          transform: scale(1.1);
+          background-color: $boldColor;
+          cursor: pointer;
+        }
+      }
+    }
+    @keyframes toNext {
+      0% {
+        width: 0vw;
+      }
+      50% {
+        width: 80vw;
+      }
+      100% {
+        width: 0vw;
+      }
+    }
+  }
+}

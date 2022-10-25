@@ -1,0 +1,400 @@
+@import './variables.scss';
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  max-width: 100vw;
+  nav {
+    display: flex;
+    flex-direction: row;
+    a {
+      display: flex;
+      justify-content: center;
+      border-radius: $borderRadius;
+      text-decoration: none;
+      color: $normalColor;
+      font-weight: 800;
+      font-size: 1.05rem;
+      padding: 0.5rem 1rem;
+      margin: 0 1rem;
+      transition: color 0.3s ease-out;
+      &:hover {
+        color: $lightestColor;
+      }
+    }
+    #accountLink {
+      position: relative;
+      left: 14vw;
+      color: $boldColor;
+    }
+    .active {
+      background-color: $normalColor;
+      color: $lightestColor;
+    }
+    #accountLink.active {
+      background-color: $boldColor;
+      color: $lightestColor;
+    }
+    #userPageLink {
+      display: none;
+      position: relative;
+      left: 14vw;
+      button {
+        background-color: $boldColor;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: $borderRadius;
+        padding: 0.3rem;
+        width: 25ch;
+        &:hover {
+          cursor: pointer;
+        }
+        #userAvatar {
+          width: 1.7rem;
+          height: 1.7rem;
+          border-radius: $borderRadius;
+          background-color: $normalColor;
+          overflow: hidden;
+          object-fit: cover;
+        }
+        #userName {
+          font-size: 1rem;
+          margin: 0 0.7rem;
+          color: $lightestColor;
+          font-weight: 800;
+          transition: color 0.3s ease-out;
+        }
+        .expandIcon {
+          font-size: 1rem;
+          color: $lightestColor;
+          font-weight: 800;
+          transition: color 0.3s ease-out;
+        }
+        &:hover .expandIcon,
+        &:hover #userName {
+          color: $normalColor;
+        }
+      }
+      .showDropdown {
+        display: block;
+      }
+      #userDropdown {
+        position: absolute;
+        left: 0vw;
+        top: 2.8rem;
+        background-color: $boldColor;
+        border-radius: $borderRadius;
+        box-shadow: $boxShadow;
+        display: none;
+        width: 20.9ch;
+        z-index: 1;
+        .userDropdownElement {
+          color: $lightestColor;
+          transition: color 0.2s ease-out;
+          margin: 0;
+          &:hover {
+            color: $normalColor;
+          }
+        }
+      }
+    }
+  }
+}
+main {
+  height: 90vh;
+  max-width: 100vw;
+}
+
+@media screen and (max-width: 1800px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    max-width: 100vw;
+    nav {
+      display: flex;
+      flex-direction: row;
+      a {
+        display: flex;
+        justify-content: center;
+        border-radius: $borderRadius;
+        text-decoration: none;
+        color: $normalColor;
+        font-weight: 800;
+        font-size: 1.05rem;
+        padding: 0.5rem 1rem;
+        margin: 0 1rem;
+        transition: color 0.3s ease-out;
+        &:hover {
+          color: $lightestColor;
+        }
+      }
+      #accountLink {
+        position: relative;
+        left: 14vw;
+        color: $boldColor;
+      }
+      .active {
+        background-color: $normalColor;
+        color: $lightestColor;
+      }
+      #accountLink.active {
+        background-color: $boldColor;
+        color: $lightestColor;
+      }
+      #userPageLink {
+        display: none;
+        position: relative;
+        left: 14vw;
+        button {
+          background-color: $boldColor;
+          border: none;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-radius: $borderRadius;
+          padding: 0.3rem;
+          width: 25ch;
+          &:hover {
+            cursor: pointer;
+          }
+          #userAvatar {
+            width: 1.7rem;
+            height: 1.7rem;
+            border-radius: $borderRadius;
+            background-color: $normalColor;
+            overflow: hidden;
+            object-fit: cover;
+          }
+          #userName {
+            font-size: 0.9rem;
+            margin: 0 0.7rem;
+            color: $lightestColor;
+            font-weight: 800;
+            transition: color 0.3s ease-out;
+          }
+          .expandIcon {
+            font-size: 1rem;
+            color: $lightestColor;
+            font-weight: 800;
+            transition: color 0.3s ease-out;
+          }
+          &:hover .expandIcon,
+          &:hover #userName {
+            color: $normalColor;
+          }
+        }
+        .showDropdown {
+          display: block;
+        }
+        #userDropdown {
+          position: absolute;
+          left: 0vw;
+          top: 2.8rem;
+          background-color: $boldColor;
+          border-radius: $borderRadius;
+          box-shadow: $boxShadow;
+          display: none;
+          width: 20.9ch;
+          z-index: 1;
+          .userDropdownElement {
+            color: $lightestColor;
+            transition: color 0.2s ease-out;
+            margin: 0;
+            &:hover {
+              color: $normalColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  header {
+    nav {
+      // display: flex;
+      // flex-direction: row;
+      a {
+        font-size: 0.95rem;
+      }
+      #userPageLink {
+        #userName {
+          font-size: 0.95rem;
+        }
+        #userDropdown {
+          top: 2.8rem;
+          .userDropdownElement {
+            color: $lightestColor;
+            transition: color 0.2s ease-out;
+            margin: 0;
+            &:hover {
+              color: $normalColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  header {
+    nav {
+      a {
+        font-size: 0.85rem;
+      }
+      #userPageLink {
+        #userName {
+          font-size: 0.85rem;
+        }
+        #userDropdown {
+          top: 2.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  header {
+    nav {
+      a {
+        font-size: 0.85rem;
+      }
+      #userPageLink {
+        #userName {
+          font-size: 0.85rem;
+        }
+        #userDropdown {
+          top: 2.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    display: flex;
+    // align-items: flex-end;
+    justify-content: center;
+    max-width: 100vw;
+    // position: fixed;
+    margin: 3rem;
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 60vw;
+      background-color: $boldColor;
+      border-radius: $borderRadius;
+      padding: 1rem;
+      // border: 1px solid black;
+      a {
+        display: flex;
+        justify-content: center;
+        border-radius: $borderRadius;
+        text-decoration: none;
+        color: $lightestColor;
+        font-weight: 800;
+        font-size: 1.05rem;
+        padding: 0.5rem 1rem;
+        margin: 0;
+        transition: color 0.3s ease-out;
+        &:hover {
+          color: $boldColor;
+        }
+      }
+      #accountLink {
+        position: relative;
+        left: 0vw;
+        color: $lightestColor;
+        // border: 1px solid black;
+      }
+      .active {
+        background-color: $lightestColor;
+        color: $boldColor;
+      }
+      #accountLink.active {
+        background-color: $lightestColor;
+        color: $boldColor;
+      }
+      #userPageLink {
+        display: none;
+        width: 100%;
+        // border: 1px solid black;
+        position: relative;
+        left: 0vw;
+        button {
+          background-color: $boldColor;
+          border: none;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-radius: $borderRadius;
+          padding: 0.3rem;
+          width: 8ch;
+          &:hover {
+            cursor: pointer;
+          }
+          #userAvatar {
+            width: 1.7rem;
+            height: 1.7rem;
+            border-radius: $borderRadius;
+            background-color: $normalColor;
+            overflow: hidden;
+            object-fit: cover;
+          }
+          #userName {
+            font-size: 0.9rem;
+            // margin: 0 0.7rem;
+            color: $lightestColor;
+            font-weight: 800;
+            transition: color 0.3s ease-out;
+            display: none;
+          }
+          .expandIcon {
+            font-size: 1rem;
+            color: $lightestColor;
+            font-weight: 800;
+            transition: color 0.3s ease-out;
+          }
+          &:hover .expandIcon,
+          &:hover #userName {
+            color: $lightestColor;
+          }
+        }
+        .showDropdown {
+          display: block;
+        }
+        #userDropdown {
+          background-color: $boldColor;
+          border-radius: $borderRadius;
+          box-shadow: $boxShadow;
+          display: none;
+          width: 100%;
+          z-index: 1;
+          // position: absolute;
+          // left: 3.8ch;
+          top: 3.5rem;
+          .userDropdownElement {
+            color: $lightestColor;
+            transition: color 0.2s ease-out;
+            margin: 0;
+            font-size: 1rem;
+            &:hover {
+              color: $lightestColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}

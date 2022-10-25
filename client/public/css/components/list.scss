@@ -1,0 +1,40 @@
+@import '../variables.scss';
+
+.userList {
+  width: 18vw;
+  height: 10vh;
+  background-color: $lightestColor;
+  box-shadow: $boxShadow;
+  display: flex;
+  margin: 0.5vw;
+  .listHeader {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: $normalColor;
+    word-break: break-all;
+    padding: 1rem;
+    border: 0.3rem solid $normalColor;
+    border-top-left-radius: $borderRadius;
+    border-bottom-left-radius: $borderRadius;
+  }
+  .listActions {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $normalColor;
+    border-top-right-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+    .showListIcon {
+      color: $lightestColor;
+      transition: color 0.2s ease-out;
+      &:hover {
+        color: $boldColor;
+      }
+    }
+  }
+}

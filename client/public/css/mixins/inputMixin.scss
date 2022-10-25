@@ -1,0 +1,116 @@
+@import '../variables.scss';
+
+@mixin inputFocusStyle($fontSize: 1.1rem, $labelTopActive: -3.5rem) {
+  transform: translate(0rem, $labelTopActive);
+  color: #3e4a3c9f;
+  font-size: $fontSize;
+}
+
+@mixin inputStyle(
+  $width: 17vw,
+  $strokeHeight: 0.2rem,
+  $inactiveColor: $normalColor,
+  $activeColor: $boldColor,
+  $fontSizeText: 1.1rem,
+  $fontSizeLabel: 1.5rem,
+  $padding: 0.5rem,
+  $labelTop: -2.5rem,
+  $labelTopActive: -3.5rem
+) {
+  label {
+    transform: translate(0.5rem, $labelTop);
+    z-index: 1;
+    height: 1.5vh;
+    font-size: $fontSizeLabel;
+    color: $boldColor;
+    transition: transform 0.1s ease-out;
+    width: 100%;
+  }
+  input,
+  select,
+  textarea {
+    border: none;
+    width: $width;
+    padding: $padding;
+    font-size: $fontSizeText;
+    z-index: 2;
+    background-color: transparent;
+    &:focus {
+      outline: none;
+    }
+  }
+  .inputFocusLines {
+    display: flex;
+    width: $width;
+    height: $strokeHeight;
+    div.inactiveLine {
+      width: 100%;
+      display: inline;
+      background-color: $inactiveColor;
+      border-radius: $borderRadius;
+    }
+    div.activeLine {
+      display: inline;
+      width: 0%;
+      background-color: $activeColor;
+      border-radius: $borderRadius;
+    }
+  }
+  input:focus + .inputFocusLines div.activeLine {
+    animation: inputActiveLine $animatedLine;
+  }
+  input:focus + .inputFocusLines div.inactiveLine {
+    animation: inputInactiveLine $animatedLine;
+  }
+  input:not(:focus) + .inputFocusLines div.activeLine {
+    animation: inputInactiveLine $animatedLine;
+  }
+  input:not(:focus) + .inputFocusLines div.inactiveLine {
+    animation: inputActiveLine $animatedLine;
+  }
+  input:focus + .inputFocusLines + label {
+    @include inputFocusStyle($fontSizeText, $labelTopActive);
+  }
+  .translate {
+    @include inputFocusStyle($fontSizeText);
+  }
+  input[type='file'] + .inputFocusLines + .translate {
+    transform: translate(0rem, -4.5rem);
+  }
+  .inputErrorField {
+    width: $width;
+    color: $errorColor;
+    transform: translateY(-0.8em);
+  }
+  .textareaLabel {
+    transform: translate(0rem, -1rem);
+    color: #3e4a3c9f;
+    font-size: 1.1rem;
+  }
+  textarea {
+    resize: none;
+  }
+  @keyframes inputActiveLine {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes inputInactiveLine {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0%;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .inputErrorField {
+    font-size: 0.9rem;
+  }
+}

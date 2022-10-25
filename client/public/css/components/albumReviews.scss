@@ -1,0 +1,147 @@
+@import '../variables.scss';
+@import '../mixins/inputMixin.scss';
+@import '../mixins/buttonMixin.scss';
+
+.albumReviewsBlock {
+  display: flex;
+  .reviewsViewChange {
+    width: 20vw;
+    .reviewsViewChangeBlock {
+      margin: 1vw;
+      background-color: $lightestColor;
+      box-shadow: $boxShadow;
+      border-radius: $borderRadius;
+      padding: 1vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      @include inputStyle($width: 15vw);
+      .albumFilterSubheader {
+        color: $boldColor;
+        margin: 1vw 0;
+      }
+      padding-bottom: 6vh;
+      .clearButton {
+        @include buttonStyle(
+          transparent,
+          transparent,
+          $normalColor,
+          $boldColor
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .albumReviewsBlock {
+    display: flex;
+    .header {
+      font-size: 1.5rem;
+    }
+    .reviewsViewChange {
+      width: 18vw;
+      margin: 0.5vw 1vw;
+      .reviewsViewChangeBlock {
+        margin: 0;
+        background-color: $lightestColor;
+        box-shadow: $boxShadow;
+        border-radius: $borderRadius;
+        padding: 1vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @include inputStyle(
+          $width: 15vw,
+          $fontSizeText: 1rem,
+          $fontSizeLabel: 1rem
+        );
+        .albumFilterSubheader {
+          color: $boldColor;
+          margin: 1vw 0;
+          font-size: 1rem;
+        }
+        padding-bottom: 6vh;
+        .clearButton {
+          @include buttonStyle(
+            transparent,
+            transparent,
+            $normalColor,
+            $boldColor
+          );
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .albumReviewsBlock {
+    display: flex;
+    flex-direction: column;
+    .header {
+      font-size: 1.5rem;
+    }
+    .albumReviews {
+      height: inherit;
+      width: 90vw;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+      margin: 0 2vw;
+      height: 90vh;
+      order: 2;
+      margin-bottom: 10vh;
+    }
+    .reviewsViewChange {
+      display: flex;
+      justify-content: center;
+      order: 1;
+      width: 95vw;
+      margin: 2vw 0;
+      .reviewsViewChangeBlock {
+        margin: 0;
+        background-color: $lightestColor;
+        box-shadow: $boxShadow;
+        border-radius: $borderRadius;
+        padding: 1vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80vw;
+        @include inputStyle(
+          $width: 60vw,
+          $fontSizeText: 1rem,
+          $fontSizeLabel: 1rem
+        );
+        .albumFilterSubheader {
+          color: $boldColor;
+          margin: 1vw 0;
+          font-size: 1rem;
+        }
+        padding-bottom: 6vh;
+        .clearButton {
+          @include buttonStyle(
+            transparent,
+            transparent,
+            $normalColor,
+            $boldColor
+          );
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

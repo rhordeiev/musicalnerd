@@ -1,0 +1,11 @@
+@import '../variables.scss';
+
+@mixin headerStyle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: $boldColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7vh;
+}

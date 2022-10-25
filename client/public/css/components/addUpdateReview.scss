@@ -1,0 +1,393 @@
+@import '../variables.scss';
+@import '../mixins/headerMixin.scss';
+@import '../mixins/inputMixin.scss';
+@import '../mixins/buttonMixin.scss';
+
+.addReviewBlock {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  .header {
+    @include headerStyle;
+  }
+  @mixin blockStyle($width: 20vw, $height: 14vh) {
+    background-color: $lightestColor;
+    box-shadow: $boxShadow;
+    width: $width;
+    height: $height;
+    border-radius: $borderRadius;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1vw;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    @include inputStyle;
+  }
+  .reviewHeaderBlock {
+    @include blockStyle;
+  }
+  .reviewMarkBlock {
+    @include blockStyle;
+  }
+  .reviewReactionBlock {
+    @include blockStyle;
+    display: flex;
+    padding-bottom: 2vh;
+    height: 15vh;
+    .header {
+      font-size: 1.5rem;
+    }
+    .reviewReaction {
+      display: flex;
+      justify-content: space-evenly;
+      width: 70%;
+      .faceReaction {
+        background-color: transparent;
+        border: none;
+        font-size: 3rem;
+        color: $boldColor;
+        transition: transform 0.2s ease-out, color 0.2s ease-out;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .activeReaction {
+        transform: scale(1.2);
+      }
+      #goodReaction {
+        &:hover {
+          color: $goodMarkColor;
+        }
+        &.activeReaction {
+          color: $goodMarkColor;
+          transform: scale(1.2);
+        }
+      }
+      #mehReaction {
+        &:hover {
+          color: $mehMarkColor;
+        }
+        &.activeReaction {
+          color: $mehMarkColor;
+        }
+      }
+      #badReaction {
+        &:hover {
+          color: $badMarkColor;
+        }
+        &.activeReaction {
+          color: $badMarkColor;
+        }
+      }
+    }
+  }
+  .addArtistButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 14vh;
+    button {
+      height: fit-content;
+      @include buttonStyle(
+        $normalColor,
+        $boldColor,
+        $lightestColor,
+        $lightestColor
+      );
+    }
+  }
+  .addArtistHiddenMain {
+    display: flex;
+  }
+  .addArtistHiddenMobile {
+    display: none;
+  }
+  .reviewTextBlock {
+    @include blockStyle(40vw, 75vh);
+    textarea {
+      width: 35vw;
+      height: 65vh;
+      text-indent: 4ch;
+      font-size: 1.1rem;
+      text-align: justify;
+      word-wrap: break-word;
+      line-height: 1.4rem;
+      overflow-y: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .addReviewBlock {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    .header {
+      @include headerStyle;
+      font-size: 1.2rem;
+    }
+    @mixin blockStyle($width: 20vw, $height: 14vh) {
+      background-color: $lightestColor;
+      box-shadow: $boxShadow;
+      width: $width;
+      height: $height;
+      border-radius: $borderRadius;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 1vw;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      @include inputStyle($fontSizeText: 1.1rem, $fontSizeLabel: 1.3rem);
+    }
+    .reviewHeaderBlock {
+      @include blockStyle;
+    }
+    .reviewMarkBlock {
+      @include blockStyle;
+    }
+    .reviewReactionBlock {
+      @include blockStyle;
+      display: flex;
+      padding-bottom: 2vh;
+      height: 15vh;
+      .header {
+        font-size: 1.2rem;
+      }
+      .reviewReaction {
+        display: flex;
+        justify-content: space-evenly;
+        width: 70%;
+        .faceReaction {
+          background-color: transparent;
+          border: none;
+          font-size: 2.5rem;
+          color: $boldColor;
+          transition: transform 0.2s ease-out, color 0.2s ease-out;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        .activeReaction {
+          transform: scale(1.2);
+        }
+        #goodReaction {
+          &:hover {
+            color: $goodMarkColor;
+          }
+          &.activeReaction {
+            color: $goodMarkColor;
+            transform: scale(1.2);
+          }
+        }
+        #mehReaction {
+          &:hover {
+            color: $mehMarkColor;
+          }
+          &.activeReaction {
+            color: $mehMarkColor;
+          }
+        }
+        #badReaction {
+          &:hover {
+            color: $badMarkColor;
+          }
+          &.activeReaction {
+            color: $badMarkColor;
+          }
+        }
+      }
+    }
+    .addArtistButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 14vh;
+      button {
+        height: fit-content;
+        @include buttonStyle(
+          $normalColor,
+          $boldColor,
+          $lightestColor,
+          $lightestColor,
+          $fontSize: 1.4rem
+        );
+      }
+    }
+    .addArtistHiddenMain {
+      display: flex;
+    }
+    .addArtistHiddenMobile {
+      display: none;
+    }
+    .reviewTextBlock {
+      @include blockStyle(40vw, 75vh);
+      .header {
+        font-size: 1.5rem;
+      }
+      textarea {
+        width: 37vw;
+        height: 65vh;
+        text-indent: 3ch;
+        font-size: 1rem;
+        text-align: justify;
+        word-wrap: break-word;
+        line-height: 1.4rem;
+        overflow-y: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .addReviewBlock {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    .header {
+      @include headerStyle;
+      font-size: 1.2rem;
+    }
+    @mixin blockStyle($width: 90vw, $height: 14vh) {
+      background-color: $lightestColor;
+      box-shadow: $boxShadow;
+      width: $width;
+      height: $height;
+      border-radius: $borderRadius;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 1vw;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      @include inputStyle(
+        $fontSizeText: 1.1rem,
+        $fontSizeLabel: 1.3rem,
+        $width: 80vw
+      );
+    }
+    .reviewHeaderBlock {
+      @include blockStyle;
+      order: 1;
+    }
+    .reviewMarkBlock {
+      @include blockStyle;
+      order: 2;
+    }
+    .reviewReactionBlock {
+      @include blockStyle;
+      display: flex;
+      padding-bottom: 2vh;
+      height: 15vh;
+      order: 3;
+      .header {
+        font-size: 1.2rem;
+      }
+      .reviewReaction {
+        display: flex;
+        justify-content: space-evenly;
+        width: 70%;
+        .faceReaction {
+          background-color: transparent;
+          border: none;
+          font-size: 2.5rem;
+          color: $boldColor;
+          transition: transform 0.2s ease-out, color 0.2s ease-out;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        .activeReaction {
+          transform: scale(1.2);
+        }
+        #goodReaction {
+          &:hover {
+            color: $goodMarkColor;
+          }
+          &.activeReaction {
+            color: $goodMarkColor;
+            transform: scale(1.2);
+          }
+        }
+        #mehReaction {
+          &:hover {
+            color: $mehMarkColor;
+          }
+          &.activeReaction {
+            color: $mehMarkColor;
+          }
+        }
+        #badReaction {
+          &:hover {
+            color: $badMarkColor;
+          }
+          &.activeReaction {
+            color: $badMarkColor;
+          }
+        }
+      }
+    }
+    .addArtistButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 14vh;
+      width: 90vw;
+      order: 5;
+      button {
+        height: fit-content;
+        @include buttonStyle(
+          $normalColor,
+          $boldColor,
+          $lightestColor,
+          $lightestColor,
+          $fontSize: 1.4rem
+        );
+        width: fit-content;
+      }
+    }
+    .addArtistHiddenMain {
+      display: none;
+    }
+    .addArtistHiddenMobile {
+      margin-bottom: 30vh;
+    }
+    .reviewTextBlock {
+      @include blockStyle(90vw, 55vh);
+      order: 4;
+      .header {
+        font-size: 1.5rem;
+      }
+      textarea {
+        width: 87vw;
+        height: 45vh;
+        text-indent: 3ch;
+        font-size: 1rem;
+        text-align: justify;
+        word-wrap: break-word;
+        line-height: 1.4rem;
+        overflow-y: auto;
+        z-index: 0;
+      }
+    }
+  }
+}

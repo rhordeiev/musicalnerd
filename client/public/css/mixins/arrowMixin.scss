@@ -1,0 +1,23 @@
+@import '../variables.scss';
+
+@mixin arrowStyle($fontSize: 3rem) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $fontSize;
+  padding: 0rem 1rem;
+  padding-bottom: 0.5vh;
+  height: 4vh;
+  width: 4vh;
+  margin: 1.1rem;
+  color: $lightestColor;
+  background-color: $normalColor;
+  border-radius: $borderRadius;
+  border: none;
+  transition: $buttonTransition;
+  &:hover {
+    background-color: $boldColor;
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+}

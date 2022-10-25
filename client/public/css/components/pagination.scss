@@ -1,0 +1,54 @@
+@import '../variables.scss';
+@import '../mixins/arrowMixin.scss';
+
+.moveUpPagination {
+  transform: translateY(-3vh);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .currentPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: $boldColor;
+  }
+  .paginationArrow {
+    @include arrowStyle;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .pagination {
+    .currentPage {
+      font-size: 1.4rem;
+    }
+    .paginationArrow {
+      @include arrowStyle(2.2rem);
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vh;
+    .currentPage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: $boldColor;
+    }
+    .paginationArrow {
+      @include arrowStyle(2rem);
+    }
+  }
+}

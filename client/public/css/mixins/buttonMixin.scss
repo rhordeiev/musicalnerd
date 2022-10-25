@@ -1,0 +1,25 @@
+@mixin buttonStyle(
+  $backgroundColor,
+  $backgroundHoverColor,
+  $textColor,
+  $textHoverColor,
+  $width: 17vw,
+  $fontSize: 1.5rem
+) {
+  width: $width;
+  color: $textColor;
+  background-color: $backgroundColor;
+  border: none;
+  padding: 0.5rem;
+  font-size: $fontSize;
+  border-radius: $borderRadius;
+  text-align: center;
+  transition: $buttonTransition;
+  margin: 1rem 0;
+  cursor: pointer;
+  &:hover {
+    background-color: $backgroundHoverColor;
+    color: $textHoverColor;
+    transform: scale(1.1);
+  }
+}

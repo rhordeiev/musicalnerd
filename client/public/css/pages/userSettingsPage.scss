@@ -1,0 +1,252 @@
+@import '../variables.scss';
+@import '../mixins/headerMixin.scss';
+@import '../mixins/inputMixin.scss';
+@import '../mixins/buttonMixin.scss';
+
+.userSettingsPage {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  .header {
+    @include headerStyle;
+    font-size: 1.8rem;
+    margin: 2vh 0;
+  }
+  .userInfo {
+    display: flex;
+    flex-wrap: wrap;
+    @include inputStyle;
+    .block {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      background-color: $lightestColor;
+      border-radius: $borderRadius;
+      box-shadow: $boxShadow;
+      padding: 1vw;
+      margin: 1vw;
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  .userFuncsBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vh;
+    .funcButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0.5vw;
+      padding: 0.5vw;
+      border-radius: $borderRadius;
+      box-shadow: $boxShadow;
+      transition: background-color 0.2s ease-out;
+      span {
+        color: $lightestColor;
+        font-size: 3rem;
+      }
+      &.saveButton {
+        background-color: $goodMarkColor;
+        border: none;
+        button {
+          background-color: transparent;
+          border: none;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      &.deleteButton {
+        background-color: $badMarkColor;
+        border: none;
+        button {
+          background-color: transparent;
+          border: none;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      &:hover {
+        background-color: $boldColor;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .userSettingsPage {
+    width: inherit;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    .header {
+      @include headerStyle;
+      font-size: 1.5rem;
+      margin: 2vh 0;
+    }
+    .userInfo {
+      display: flex;
+      flex-wrap: wrap;
+      @include inputStyle($fontSizeText: 1rem, $fontSizeLabel: 1.2rem);
+      .block {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: $lightestColor;
+        border-radius: $borderRadius;
+        box-shadow: $boxShadow;
+        padding: 1vw;
+        margin: 0.5vw;
+        form {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+    .userFuncsBlock {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -1vh;
+      .funcButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.5vw;
+        padding: 0.5vw;
+        border-radius: $borderRadius;
+        box-shadow: $boxShadow;
+        transition: background-color 0.2s ease-out;
+        span {
+          color: $lightestColor;
+          font-size: 3rem;
+        }
+        &.saveButton {
+          background-color: $goodMarkColor;
+          border: none;
+          button {
+            background-color: transparent;
+            border: none;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+        &.deleteButton {
+          background-color: $badMarkColor;
+          border: none;
+          button {
+            background-color: transparent;
+            border: none;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+        &:hover {
+          background-color: $boldColor;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .userSettingsPage {
+    // width: 100vw;
+    height: auto;
+    display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    .header {
+      @include headerStyle;
+      font-size: 1.5rem;
+      margin: 2vh 0;
+    }
+    .userInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // flex-wrap: wrap;
+      @include inputStyle(
+        $fontSizeText: 1rem,
+        $fontSizeLabel: 1.2rem,
+        $width: 80vw
+      );
+      .block {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: $lightestColor;
+        border-radius: $borderRadius;
+        box-shadow: $boxShadow;
+        padding: 1vw;
+        margin: 0.5vw;
+        width: 90vw;
+        form {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+    .userFuncsBlock {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1vw;
+      .funcButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1vw;
+        padding: 1vw;
+        border-radius: $borderRadius;
+        box-shadow: $boxShadow;
+        transition: background-color 0.2s ease-out;
+        span {
+          color: $lightestColor;
+          font-size: 2.7rem;
+        }
+        &.saveButton {
+          background-color: $goodMarkColor;
+          border: none;
+          button {
+            background-color: transparent;
+            border: none;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+        &.deleteButton {
+          background-color: $badMarkColor;
+          border: none;
+          button {
+            background-color: transparent;
+            border: none;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+        &:hover {
+          background-color: $boldColor;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,712 @@
+@import '../variables.scss';
+@import '../mixins/headerMixin.scss';
+@import '../mixins/buttonMixin.scss';
+
+.albumPage {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .header {
+    @include headerStyle;
+  }
+  .albumInfo {
+    height: 90%;
+    display: flex;
+    .albumMainBlock {
+      padding: 1vw;
+      #albumPhoto {
+        width: 20vw;
+        height: 20vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: $borderRadius;
+        background-color: $lightestColor;
+        box-shadow: $boxShadow;
+        img {
+          margin: 1vw;
+          height: 35vh;
+          width: 35vh;
+          border-radius: $borderRadius;
+          overflow: hidden;
+          object-fit: cover;
+        }
+      }
+      .albumMainInfoBlock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 20vw;
+        margin-top: 0.5vw;
+        background-color: $lightestColor;
+        box-shadow: $boxShadow;
+        border-radius: $borderRadius;
+        #albumName {
+          font-size: 2rem;
+          color: $boldColor;
+          font-style: italic;
+        }
+        #albumArtist {
+          font-size: 1.4rem;
+          color: $boldColor;
+          text-decoration: none;
+          transition: color 0.2s ease-in-out;
+          &:hover {
+            color: $normalColor;
+          }
+        }
+      }
+      .albumRatings {
+        display: flex;
+        margin-top: 0.5vw;
+        width: 20vw;
+        height: 10vh;
+        .markBlock {
+          width: 35%;
+          background-color: $lightestColor;
+          border-radius: $borderRadius;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          box-shadow: $boxShadow;
+          #mark {
+            font-size: 3rem;
+            font-weight: 800;
+            color: $boldColor;
+          }
+          .reviewCountText {
+            font-size: 0.8rem;
+            #reviewCount {
+              font-weight: 800;
+            }
+          }
+        }
+        .reactions {
+          margin-left: 0.5vw;
+          padding: 0.2vw;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 65%;
+          height: 10vh;
+          border-radius: $borderRadius;
+          background-color: $lightestColor;
+          box-shadow: $boxShadow;
+          .reactionProgressBar {
+            border-radius: $borderRadius;
+            height: 0.4rem;
+          }
+          .faceReaction {
+            font-size: 1.5rem;
+            padding: 0.1vw;
+          }
+          .reaction {
+            display: flex;
+            align-items: center;
+          }
+          #goodReaction {
+            .reactionProgressBar {
+              width: 0;
+              background: $goodMarkColor;
+            }
+            .faceReaction {
+              color: $goodMarkColor;
+            }
+          }
+          #mehReaction {
+            .reactionProgressBar {
+              width: 0;
+              background: $mehMarkColor;
+            }
+            .faceReaction {
+              color: $mehMarkColor;
+            }
+          }
+          #badReaction {
+            .reactionProgressBar {
+              width: 0;
+              background: $badMarkColor;
+            }
+            .faceReaction {
+              color: $badMarkColor;
+            }
+          }
+        }
+      }
+      .addReviewButton {
+        display: flex;
+        justify-content: center;
+        a {
+          @include buttonStyle(
+            $boldColor,
+            $boldColor,
+            $lightestColor,
+            $lightestColor
+          );
+          text-decoration: none;
+        }
+      }
+      .moderatorFuncs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1vh;
+        .funcButton {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0.5vw;
+          padding: 0.5vw;
+          border-radius: $borderRadius;
+          box-shadow: $boxShadow;
+          transition: background-color 0.2s ease-out;
+          span {
+            color: $lightestColor;
+            font-size: 3rem;
+          }
+          &.addAlbumButton {
+            text-decoration: none;
+            background-color: $goodMarkColor;
+          }
+          &.editButton {
+            text-decoration: none;
+            background-color: $mehMarkColor;
+          }
+          &.deleteButton {
+            background-color: $badMarkColor;
+            border: none;
+            button {
+              background-color: transparent;
+              border: none;
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+          &:hover {
+            background-color: $boldColor;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .albumMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 10%;
+    width: 100%;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: $normalColor;
+      border: 0.3rem solid $normalColor;
+      padding: 0.5rem;
+      transition: background-color 0.2s ease-out, color 0.2s ease-out;
+      flex-basis: 100%;
+      height: 100%;
+      border-bottom: none;
+      &:first-child {
+        border-left: none;
+      }
+      &:nth-child(2) {
+        border-left: none;
+        border-right: none;
+      }
+      &:last-child {
+        border-right: none;
+      }
+      &.active {
+        background-color: $normalColor;
+        color: $lightestColor;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .albumPage {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .header {
+      @include headerStyle;
+    }
+    .albumInfo {
+      height: 90%;
+      display: flex;
+      .albumMainBlock {
+        padding: 1vw;
+        #albumPhoto {
+          width: 20vw;
+          height: 20vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: $borderRadius;
+          background-color: $lightestColor;
+          box-shadow: $boxShadow;
+          img {
+            margin: 1vw;
+            height: 38vh;
+            width: 38vh;
+            border-radius: $borderRadius;
+            overflow: hidden;
+            object-fit: cover;
+          }
+        }
+        .albumMainInfoBlock {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 20vw;
+          margin-top: 0.5vw;
+          background-color: $lightestColor;
+          box-shadow: $boxShadow;
+          border-radius: $borderRadius;
+          #albumName {
+            font-size: 1.5rem;
+            color: $boldColor;
+            font-style: italic;
+          }
+          #albumArtist {
+            font-size: 1.1rem;
+            color: $boldColor;
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+            &:hover {
+              color: $normalColor;
+            }
+          }
+        }
+        .albumRatings {
+          display: flex;
+          margin-top: 0.5vw;
+          width: 20vw;
+          height: 10vh;
+          .markBlock {
+            width: 35%;
+            background-color: $lightestColor;
+            border-radius: $borderRadius;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: $boxShadow;
+            #mark {
+              font-size: 2.5rem;
+              font-weight: 800;
+              color: $boldColor;
+            }
+            .reviewCountText {
+              font-size: 0.7rem;
+              #reviewCount {
+                font-weight: 800;
+              }
+            }
+          }
+          .reactions {
+            margin-left: 0.5vw;
+            padding: 0.2vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 65%;
+            height: 10vh;
+            border-radius: $borderRadius;
+            background-color: $lightestColor;
+            box-shadow: $boxShadow;
+            .reactionProgressBar {
+              border-radius: $borderRadius;
+              height: 0.25rem;
+            }
+            .faceReaction {
+              font-size: 1.2rem;
+              padding: 0.1vw;
+            }
+            .reaction {
+              display: flex;
+              align-items: center;
+            }
+            #goodReaction {
+              .reactionProgressBar {
+                width: 0;
+                background: $goodMarkColor;
+              }
+              .faceReaction {
+                color: $goodMarkColor;
+              }
+            }
+            #mehReaction {
+              .reactionProgressBar {
+                width: 0;
+                background: $mehMarkColor;
+              }
+              .faceReaction {
+                color: $mehMarkColor;
+              }
+            }
+            #badReaction {
+              .reactionProgressBar {
+                width: 0;
+                background: $badMarkColor;
+              }
+              .faceReaction {
+                color: $badMarkColor;
+              }
+            }
+          }
+        }
+        .addReviewButton {
+          display: flex;
+          justify-content: center;
+          a {
+            @include buttonStyle(
+              $boldColor,
+              $boldColor,
+              $lightestColor,
+              $lightestColor,
+              $fontSize: 1.2rem
+            );
+            text-decoration: none;
+          }
+        }
+        .moderatorFuncs {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 1vh;
+          .funcButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0.5vw;
+            padding: 0.5vw;
+            border-radius: $borderRadius;
+            box-shadow: $boxShadow;
+            transition: background-color 0.2s ease-out;
+            span {
+              color: $lightestColor;
+              font-size: 2.5rem;
+            }
+            &.addAlbumButton {
+              text-decoration: none;
+              background-color: $goodMarkColor;
+            }
+            &.editButton {
+              text-decoration: none;
+              background-color: $mehMarkColor;
+            }
+            &.deleteButton {
+              background-color: $badMarkColor;
+              border: none;
+              button {
+                background-color: transparent;
+                border: none;
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+            &:hover {
+              background-color: $boldColor;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .albumMenu {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 10%;
+      width: 100%;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: bold;
+        color: $normalColor;
+        border: 0.2rem solid $normalColor;
+        padding: 0.5rem;
+        transition: background-color 0.2s ease-out, color 0.2s ease-out;
+        flex-basis: 100%;
+        height: 100%;
+        border-bottom: none;
+        &:first-child {
+          border-left: none;
+        }
+        &:nth-child(2) {
+          border-left: none;
+          border-right: none;
+        }
+        &:last-child {
+          border-right: none;
+        }
+        &.active {
+          background-color: $normalColor;
+          color: $lightestColor;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .albumPage {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .header {
+      @include headerStyle;
+    }
+    .albumInfo {
+      // height: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      .albumMainBlock {
+        padding: 1vw;
+        #albumPhoto {
+          width: 90vw;
+          height: 90vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: $borderRadius;
+          background-color: $lightestColor;
+          box-shadow: $boxShadow;
+          img {
+            margin: 1vw;
+            height: 80vw;
+            width: 80vw;
+            border-radius: $borderRadius;
+            overflow: hidden;
+            object-fit: cover;
+          }
+        }
+        .albumMainInfoBlock {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 90vw;
+          margin-top: 0.5vw;
+          background-color: $lightestColor;
+          box-shadow: $boxShadow;
+          border-radius: $borderRadius;
+          #albumName {
+            font-size: 1.5rem;
+            color: $boldColor;
+            font-style: italic;
+          }
+          #albumArtist {
+            font-size: 1.1rem;
+            color: $boldColor;
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+            &:hover {
+              color: $normalColor;
+            }
+          }
+        }
+        .albumRatings {
+          display: flex;
+          margin-top: 0.5vw;
+          width: 90vw;
+          height: 12vh;
+          .markBlock {
+            width: 35%;
+            background-color: $lightestColor;
+            border-radius: $borderRadius;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: $boxShadow;
+            #mark {
+              font-size: 2.5rem;
+              font-weight: 800;
+              color: $boldColor;
+            }
+            .reviewCountText {
+              font-size: 0.7rem;
+              #reviewCount {
+                font-weight: 800;
+              }
+            }
+          }
+          .reactions {
+            margin-left: 0.5vw;
+            padding: 0.2vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 65%;
+            height: 12vh;
+            border-radius: $borderRadius;
+            background-color: $lightestColor;
+            box-shadow: $boxShadow;
+            .reactionProgressBar {
+              border-radius: $borderRadius;
+              height: 0.25rem;
+            }
+            .faceReaction {
+              font-size: 1.2rem;
+              padding: 0.1vw;
+            }
+            .reaction {
+              display: flex;
+              align-items: center;
+            }
+            #goodReaction {
+              .reactionProgressBar {
+                width: 0;
+                background: $goodMarkColor;
+              }
+              .faceReaction {
+                color: $goodMarkColor;
+              }
+            }
+            #mehReaction {
+              .reactionProgressBar {
+                width: 0;
+                background: $mehMarkColor;
+              }
+              .faceReaction {
+                color: $mehMarkColor;
+              }
+            }
+            #badReaction {
+              .reactionProgressBar {
+                width: 0;
+                background: $badMarkColor;
+              }
+              .faceReaction {
+                color: $badMarkColor;
+              }
+            }
+          }
+        }
+        .addReviewButton {
+          display: flex;
+          justify-content: center;
+          a {
+            @include buttonStyle(
+              $boldColor,
+              $boldColor,
+              $lightestColor,
+              $lightestColor,
+              $fontSize: 1.2rem
+            );
+            text-decoration: none;
+            width: 80vw;
+          }
+        }
+        .moderatorFuncs {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 1vh;
+          .funcButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0.5vw;
+            padding: 0.5vw;
+            border-radius: $borderRadius;
+            box-shadow: $boxShadow;
+            transition: background-color 0.2s ease-out;
+            span {
+              color: $lightestColor;
+              font-size: 2.5rem;
+            }
+            &.addAlbumButton {
+              text-decoration: none;
+              background-color: $goodMarkColor;
+            }
+            &.editButton {
+              text-decoration: none;
+              background-color: $mehMarkColor;
+            }
+            &.deleteButton {
+              background-color: $badMarkColor;
+              border: none;
+              button {
+                background-color: transparent;
+                border: none;
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+            &:hover {
+              background-color: $boldColor;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .albumMenu {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+      height: 30%;
+      width: 100%;
+      bottom: 0;
+      position: fixed;
+      z-index: 1;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: bold;
+        color: $normalColor;
+        border: 0.2rem solid $normalColor;
+        padding: 0.5rem;
+        transition: background-color 0.2s ease-out, color 0.2s ease-out;
+        width: 100%;
+        border-bottom: none;
+        background-color: $lightestColor;
+        &:first-child {
+          border-left: none;
+          border-right: none;
+        }
+        &:nth-child(2) {
+          border-left: none;
+          border-right: none;
+        }
+        &:last-child {
+          border-right: none;
+          border-left: none;
+        }
+        &.active {
+          background-color: $normalColor;
+          color: $lightestColor;
+        }
+      }
+    }
+  }
+}
