@@ -24,3 +24,7 @@ Also, after authentication, the tab "Ввійти" changed to tab with our user 
 ![image](https://user-images.githubusercontent.com/70975219/198380424-3ff79812-b383-4f05-a64d-f776c69050d6.png)
 Let's click on "Налаштування" to go to settings page. On this page you can change different information about user. The settings page look like this:
 ![image](https://user-images.githubusercontent.com/70975219/198382690-7ab37f39-906c-4782-937a-d9ba5c40da61.png)
+## Search page
+To search on website click on "Пошук" tab. There you will see search input, on the left located information you can search (you just need to click on what you want to search) and on the center you can see results of your search and pagination. Let's find something and click on the right of the block to go to the page of this musical project
+![image](https://user-images.githubusercontent.com/70975219/198382978-87fe89dd-7d31-4061-b4a9-35d36aa51f05.png)
+## Album page
