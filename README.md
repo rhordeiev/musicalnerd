@@ -65,3 +65,5 @@ After adding new artist we are redirected to their newly created page. Here you 
 ## New musical project page
 Let's click on adding new musical project button and, after that, we are being redirected to that page. Let's write some info and add new musical project to artist. The page looking like this:
 ![image](https://user-images.githubusercontent.com/70975219/198398269-79d32eae-1265-42e6-8de5-f6a6e5989289.png)
+After adding new musical project, we'll go to it's page. Here we can see that moderator has functionality of changing and deleting the musical project. The page look like this: 
+![image](https://user-images.githubusercontent.com/70975219/198399167-fae48d81-60c1-4259-ae31-f1750af92539.png)
