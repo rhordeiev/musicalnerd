@@ -38,4 +38,5 @@ Next, let's click on link to user page and we can see that there's a review on t
 ![image](https://user-images.githubusercontent.com/70975219/198389663-ecea22df-09ca-46cb-b039-44c4e7503499.png)
 Let's go back musical project page and click on "Відгуки" tab which shows all reviews on this project. On the page we can see updated average mark and reaction after we added our reviews. It looks like this:
 ![image](https://user-images.githubusercontent.com/70975219/198389944-5e636d82-d7f7-47a0-b323-b0fa5a26777c.png)
-
+Additionaly, let's go on another user page and filter reviews with meh reaction. The result is below:
+![image](https://user-images.githubusercontent.com/70975219/198390837-b09f9d61-ef3d-4d23-bad0-030311fe5e52.png)
