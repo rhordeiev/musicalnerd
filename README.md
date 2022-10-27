@@ -14,4 +14,6 @@ Different forms of registration look like this:
 ![image](https://user-images.githubusercontent.com/70975219/198378320-91f69171-94ef-4f81-96af-48d5825a060a.png)
 The error fields look like this:
 ![image](https://user-images.githubusercontent.com/70975219/198378453-6cb36f6e-7a23-4ba9-a520-a09878d08116.png)
-
+## Login on website
+To login on website simply enter the data like login and password and click "Ввійти":
+![image](https://user-images.githubusercontent.com/70975219/198379157-3348d4b9-af1c-4235-b186-dac9d741d222.png)
