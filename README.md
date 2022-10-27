@@ -49,3 +49,8 @@ By clicking on "Музичні твори" tab we can see the musical projects o
 ![image](https://user-images.githubusercontent.com/70975219/198393127-ca499dff-236f-40e5-b8de-04f4eb1b9889.png)
 There's also tab for group chat like on the page of musical project:
 ![image](https://user-images.githubusercontent.com/70975219/198394370-918b41c5-e60d-41ff-aec3-f04378cd85fd.png)
+## Main page
+To go on main tab click "Головна". There you can see musical project or arists that are popular right now. Popular means had the most reviews and likes in the last week. It looks like this:
+![image](https://user-images.githubusercontent.com/70975219/198394596-898208f7-6ee9-4423-8a86-007063b365a2.png)
+By clicking on the arrow near "Популярне" we can see the musical projects that will come out in a week ("Очікуване"). The page has this look:
+![image](https://user-images.githubusercontent.com/70975219/198395438-2463aa3a-d136-49aa-98dc-7d6a5969fac4.png)
