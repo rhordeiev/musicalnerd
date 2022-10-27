@@ -30,3 +30,7 @@ To search on website click on "Пошук" tab. There you will see search input,
 ## Musical project page
 Below we can see musical project page. On the first tab ("Опис") you can see all information about this project, including: muical project cover, average rating mark, reactions on musical project, details, genres, languages, credits and tracks. Also there you can see a button which you can use to add your review. Let's click on it:
 ![image](https://user-images.githubusercontent.com/70975219/198384489-9093da44-c0c9-402c-920e-7ab6474a0f40.png)
+After clicking we can see page with info that you need to enter before posting review. You must write the header of review, choose reaction of how you felt after listening to this project and write a review. Choosing mark isn't obligatory. After that, to add review, we should click on "Додати":
+![image](https://user-images.githubusercontent.com/70975219/198385725-cacbed5a-ce0c-481e-a843-91a4986a00f8.png)
+After adding review you can go to its page and see how it's looking. Also, on the right, there are button for changing review and deleting it.This page look like this:
+![image](https://user-images.githubusercontent.com/70975219/198387249-374877b6-43f7-487b-ad54-9b9dbfa5ed69.png)
