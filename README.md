@@ -47,3 +47,5 @@ Let's go to the artist page. On the first tab called "Опис" you can observe 
 ![image](https://user-images.githubusercontent.com/70975219/198391990-54e07a88-f8d2-4fd1-afe5-e04aafc04792.png)
 By clicking on "Музичні твори" tab we can see the musical projects of the artist sorted in chronological order. They also act like a link to specific musical project:
 ![image](https://user-images.githubusercontent.com/70975219/198393127-ca499dff-236f-40e5-b8de-04f4eb1b9889.png)
+There's also tab for group chat like on the page of musical project:
+![image](https://user-images.githubusercontent.com/70975219/198394370-918b41c5-e60d-41ff-aec3-f04378cd85fd.png)
