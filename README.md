@@ -36,3 +36,6 @@ After adding review you can go to its page and see how it's looking. Also, on th
 ![image](https://user-images.githubusercontent.com/70975219/198387249-374877b6-43f7-487b-ad54-9b9dbfa5ed69.png)
 Next, let's click on link to user page and we can see that there's a review on the page that we added some seconds ago. Depending on what reaction you chose, the color of the review will vary (it can be green, yellow or red). Considering our review is positive, its color is green. Also on the review block you can see information about who made review (it's a link too), what musical project was reviewed and its artist (they're links like previous), date the review was posted and mark user gave to it. On the right side of the review block there's a link to review page, button for liking review and its like count. The user page with review look like this:
 ![image](https://user-images.githubusercontent.com/70975219/198389663-ecea22df-09ca-46cb-b039-44c4e7503499.png)
+Let's go back musical project page and click on "Відгуки" tab which shows all reviews on this project. On the page we can see updated average mark and reaction after we added our reviews. It looks like this:
+![image](https://user-images.githubusercontent.com/70975219/198389944-5e636d82-d7f7-47a0-b323-b0fa5a26777c.png)
+
