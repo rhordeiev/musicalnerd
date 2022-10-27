@@ -18,7 +18,7 @@ The error fields look like this:
 To login on website simply enter the data like login and password and click "Ввійти":
 ![image](https://user-images.githubusercontent.com/70975219/198379157-3348d4b9-af1c-4235-b186-dac9d741d222.png)
 ## User page
-You can look at newly created page below. Here we can see user profile image, their count of reviews and information that we entered a moment ago. Also there's available form that you can use for filtering your reviews, but because current user doesn't have any reviews, it's useless right now:
+You can look at newly created page below. Here we can see user profile image, their count of reviews and information that we entered a moment ago. Also there's available form that you can use for filtering and sorting your reviews, but because current user doesn't have any reviews, it's useless right now:
 ![image](https://user-images.githubusercontent.com/70975219/198379359-11f990ef-2dd1-490e-ab81-a30d14d27e04.png)
 Also, after authentication, the tab "Ввійти" changed to tab with our user with subtabs for going to user page, going to user settings and loging out:
 ![image](https://user-images.githubusercontent.com/70975219/198380424-3ff79812-b383-4f05-a64d-f776c69050d6.png)
@@ -40,3 +40,5 @@ Let's go back musical project page and click on "Відгуки" tab which shows
 ![image](https://user-images.githubusercontent.com/70975219/198389944-5e636d82-d7f7-47a0-b323-b0fa5a26777c.png)
 Additionaly, let's go on another user page and filter reviews with meh reaction. The result is below:
 ![image](https://user-images.githubusercontent.com/70975219/198390837-b09f9d61-ef3d-4d23-bad0-030311fe5e52.png)
+The last tab is for group chatting. Here you can discuss musical project with other users in more loose form. Here how it looks:
+![image](https://user-images.githubusercontent.com/70975219/198391529-ca46fd8f-ed77-40b7-87f9-66c870e169c4.png)
