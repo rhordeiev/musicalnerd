@@ -27,4 +27,6 @@ Let's click on "Налаштування" to go to settings page. On this page y
 ## Search page
 To search on website click on "Пошук" tab. There you will see search input, on the left located information you can search (you just need to click on what you want to search) and on the center you can see results of your search and pagination. Let's find something and click on the right of the block to go to the page of this musical project
 ![image](https://user-images.githubusercontent.com/70975219/198382978-87fe89dd-7d31-4061-b4a9-35d36aa51f05.png)
-## Album page
+## Musical project page
+Below we can see musical project page. On the first tab ("Опис") you can see all information about this project, including: muical project cover, average rating mark, reactions on musical project, details, genres, languages, credits and tracks. Also there you can see a button which you can use to add your review. Let's click on it:
+![image](https://user-images.githubusercontent.com/70975219/198384489-9093da44-c0c9-402c-920e-7ab6474a0f40.png)
