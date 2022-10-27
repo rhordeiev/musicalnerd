@@ -60,3 +60,6 @@ Let's log out of the page and log in as moderator. Moderator has an ability to m
 ## New artist page
 Now let's go to add new artist page. There you can see an information that you can enter about artist: their name, photo, genres, links to social media and description. It looks like this:
 ![image](https://user-images.githubusercontent.com/70975219/198396933-d907f869-a4cb-41cd-8a9b-72665ffb9c09.png)
+After adding new artist we are redirected to their newly created page. Here you can see moderator has buttons for adding new musical project to the artist, changing and deleting artist:
+![image](https://user-images.githubusercontent.com/70975219/198398049-e8fde33e-d262-4299-bab6-5522d935d982.png)
+## New musical project page
