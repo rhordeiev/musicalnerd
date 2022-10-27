@@ -1,7 +1,6 @@
 # MusicalNerd
-Full video of showing website capabilities can be found here:
+Full video of showing website capabilities can be found via the link below. Right now there's only available ukrainian version of the website, soon will be added english version:
 https://drive.google.com/file/d/1DwUf_9_b4vXCg_GMuJ19F-MJC8rScaVt/view?usp=sharing
-Right now there's only available ukrainian version of the website, soon will be added english version.
 ## Register on website
 To register on website you should click on tab "Ввійти" and after that on the form click "Бажаєте зареєструватись". There will be a multistep form in which you can
 write information about yourself:
