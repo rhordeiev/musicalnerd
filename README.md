@@ -42,3 +42,6 @@ Additionaly, let's go on another user page and filter reviews with meh reaction.
 ![image](https://user-images.githubusercontent.com/70975219/198390837-b09f9d61-ef3d-4d23-bad0-030311fe5e52.png)
 The last tab is for group chatting. Here you can discuss musical project with other users in more loose form. Here how it looks:
 ![image](https://user-images.githubusercontent.com/70975219/198391529-ca46fd8f-ed77-40b7-87f9-66c870e169c4.png)
+## Artist page
+Let's go to the artist page. On the first tab called "Опис" you can observe the information about them: their name, photo, review count, average mark and reactions across all musical projects, the description of the group, genres of their music and links to their social media. The page looks like this:
+![image](https://user-images.githubusercontent.com/70975219/198391990-54e07a88-f8d2-4fd1-afe5-e04aafc04792.png)
