@@ -45,3 +45,5 @@ The last tab is for group chatting. Here you can discuss musical project with ot
 ## Artist page
 Let's go to the artist page. On the first tab called "Опис" you can observe the information about them: their name, photo, review count, average mark and reactions across all musical projects, the description of the group, genres of their music and links to their social media. The page looks like this:
 ![image](https://user-images.githubusercontent.com/70975219/198391990-54e07a88-f8d2-4fd1-afe5-e04aafc04792.png)
+By clicking on "Музичні твори" tab we can see the musical projects of the artist sorted in chronological order. They also act like a link to specific musical project:
+![image](https://user-images.githubusercontent.com/70975219/198393127-ca499dff-236f-40e5-b8de-04f4eb1b9889.png)
