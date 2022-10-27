@@ -54,3 +54,9 @@ To go on main tab click "Головна". There you can see musical project or a
 ![image](https://user-images.githubusercontent.com/70975219/198394596-898208f7-6ee9-4423-8a86-007063b365a2.png)
 By clicking on the arrow near "Популярне" we can see the musical projects that will come out in a week ("Очікуване"). The page has this look:
 ![image](https://user-images.githubusercontent.com/70975219/198395438-2463aa3a-d136-49aa-98dc-7d6a5969fac4.png)
+## Moderator page
+Let's log out of the page and log in as moderator. Moderator has an ability to manage content on the website. After logging in, we can see personal information about moderator, their avatar and link to the page to add new artist. The page look like this:
+![image](https://user-images.githubusercontent.com/70975219/198395872-6f731654-35a2-4f25-95e5-3b2098387019.png)
+## New artist page
+Now let's go to add new artist page. There you can see an information that you can enter about artist: their name, photo, genres, links to social media and description. It looks like this:
+![image](https://user-images.githubusercontent.com/70975219/198396933-d907f869-a4cb-41cd-8a9b-72665ffb9c09.png)
